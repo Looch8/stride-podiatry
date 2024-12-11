@@ -36,11 +36,7 @@ const App = () => {
 
 			<main className="main-content">
 				<section id="home" className="home-section">
-					<img
-						src={logo}
-						alt="Stride Podiatry Logo"
-						className="home-logo"
-					/>
+					<h2>Welcome to Stride Podiatry</h2>
 					<p>
 						Providing expert podiatry care directly to your
 						doorstep.
