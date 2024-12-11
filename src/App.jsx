@@ -1,5 +1,12 @@
 import './styles/App.css';
 import logo from './assets/images/Stride_logo.jpg';
+import { Route, Routes, Link } from 'react-router-dom';
+
+import Home from './pages/Home';
+import Services from './pages/Services';
+import About from './pages/About';
+import Booking from './pages/Booking';
+import Contact from './pages/Contact';
 
 const App = () => {
 	return (
@@ -16,42 +23,32 @@ const App = () => {
 					</div>
 					<ul className="nav-links">
 						<li>
-							<a href="#home">Home</a>
+							<Link to="/">Home</Link>
 						</li>
 						<li>
-							<a href="#services">Services</a>
+							<Link to="/services">Services</Link>
 						</li>
 						<li>
-							<a href="#about-us">About Us</a>
+							<Link to="/about-us">About Us</Link>
 						</li>
 						<li>
-							<a href="#booking">Booking</a>
+							<Link to="/booking">Booking</Link>
 						</li>
 						<li>
-							<a href="#contact-us">Contact Us</a>
+							<Link to="/contact-us">Contact Us</Link>
 						</li>
 					</ul>
 				</nav>
 			</header>
 
 			<main className="main-content">
-				<section id="home" className="home-section">
-					<h2>Welcome to Stride Podiatry</h2>
-					<p>
-						Providing expert podiatry care directly to your
-						doorstep.
-					</p>
-					<div className="book-now">
-						<h3>Ready to Take the First Step?</h3>
-						<p>
-							Book your appointment today for professional
-							podiatry care in the comfort of your home!
-						</p>
-						<a href="#booking" className="book-now-button">
-							Book Now
-						</a>
-					</div>
-				</section>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/services" element={<Services />} />
+					<Route path="/about-us" element={<About />} />
+					<Route path="/booking" element={<Booking />} />
+					<Route path="/contact-us" element={<Contact />} />
+				</Routes>
 			</main>
 
 			<footer className="footer">
