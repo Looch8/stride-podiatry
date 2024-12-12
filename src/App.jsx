@@ -29,7 +29,7 @@ const App = () => {
 							<Link to="/services">Services</Link>
 						</li>
 						<li>
-							<Link to="/about-us">About Us</Link>
+							<Link to="/about-us">About</Link>
 						</li>
 						<li>
 							<Link to="/booking">Booking</Link>
