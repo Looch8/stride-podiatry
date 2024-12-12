@@ -1,0 +1,34 @@
+.about-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+	background-color: #f5f8fc;
+	color: #333;
+}
+
+.profile-photo {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+	max-width: 600px;
+	text-align: center;
+}
+
+.about-text h1 {
+	font-size: 2rem;
+	color: #004080;
+	margin-bottom: 1rem;
+}
+
+.about-text p {
+	font-size: 1.2rem;
+	line-height: 1.6;
+	margin-bottom: 1rem;
+	color: #333;
+}
