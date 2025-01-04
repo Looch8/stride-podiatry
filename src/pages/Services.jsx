@@ -30,8 +30,8 @@ const Services = () => {
 				<li>
 					<h3>Biomechanics</h3>
 					<p>
-						Detailed analysis of foot function and movement to
-						address imbalances and improve overall mobility.
+						Analysis of foot function and movement to address
+						imbalances and improve overall mobility.
 					</p>
 				</li>
 				<li>

@@ -1,5 +1,3 @@
-/*  */
-
 .about-container {
 	display: flex;
 	flex-direction: column;
@@ -7,6 +5,7 @@
 	padding: 2rem;
 	background-color: #f5f8fc;
 	color: #333;
+	gap: 2rem; /* Adds consistent spacing between sections */
 }
 
 .profile-photo {
@@ -15,11 +14,13 @@
 	border-radius: 50%;
 	margin-bottom: 1.5rem;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	object-fit: cover; /* Ensures image fills the circle perfectly */
 }
 
 .about-text {
 	max-width: 600px;
 	text-align: center;
+	padding: 0 1rem; /* Adds padding for smaller screens */
 }
 
 .about-text h1 {
@@ -29,8 +30,23 @@
 }
 
 .about-text p {
-	font-size: 1.2rem;
-	line-height: 1.6;
+	font-size: 1.1rem;
+	line-height: 1.8;
 	margin-bottom: 1rem;
 	color: #333;
+}
+
+@media (min-width: 768px) {
+	.about-container {
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 3rem;
+	}
+	.profile-photo {
+		width: 180px;
+		height: 180px;
+	}
+	.about-text {
+		text-align: left;
+	}
 }
