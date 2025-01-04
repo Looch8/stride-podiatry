@@ -1,15 +1,13 @@
-/* Services.css */
-
 .services {
-	padding: 2rem;
+	padding: 4rem 2rem;
 	background-color: #f9f9f9;
 	text-align: center;
 }
 
 .services h2 {
 	font-size: 2.5rem;
-	margin-bottom: 1.5rem;
-	color: #333;
+	margin-bottom: 2rem;
+	color: #004080;
 }
 
 .services-list {
@@ -17,32 +15,51 @@
 	padding: 0;
 	margin: 0;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 1.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
 }
 
 .services-list li {
 	background-color: #fff;
 	border: 1px solid #ddd;
-	border-radius: 8px;
-	padding: 1.5rem;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	transition: transform 0.2s, box-shadow 0.2s;
+	border-radius: 12px;
+	padding: 2rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .services-list li:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+	transform: translateY(-8px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .services-list h3 {
-	font-size: 1.8rem;
-	color: #0077cc;
-	margin-bottom: 0.75rem;
+	font-size: 1.75rem;
+	color: #004080;
+	margin-bottom: 1rem;
 }
 
 .services-list p {
 	font-size: 1rem;
 	color: #555;
-	line-height: 1.6;
+	line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.services h2 {
+		font-size: 2rem;
+	}
+
+	.services-list li {
+		padding: 1.5rem;
+	}
+
+	.services-list h3 {
+		font-size: 1.5rem;
+	}
+
+	.services-list p {
+		font-size: 0.9rem;
+	}
 }
