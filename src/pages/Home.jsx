@@ -10,7 +10,10 @@ const Home = () => {
 						Book your appointment today for professional podiatry
 						care in the comfort of your home!
 					</p>
-					<a href="#booking" className="book-now-button">
+					<a
+						href="https://stride-podiatry.au4.cliniko.com/bookings"
+						className="book-now-button"
+					>
 						Book Now
 					</a>
 				</div>
