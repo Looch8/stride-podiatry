@@ -2,7 +2,7 @@
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
-	background-color: #f5f8fc;
+	background-color: #daedfe;
 	color: #333;
 	font-family: 'Lato', Arial, sans-serif;
 }
@@ -11,10 +11,12 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	font-size: 1.5rem;
+	font-weight: bold;
 }
 
 .logo-image {
-	height: 70px;
+	height: 100px;
 	width: auto;
 }
 
@@ -25,8 +27,8 @@ body {
 }
 
 .header {
-	background-color: #004080;
-	color: white;
+	background-color: white;
+	color: #004080;
 	padding: 1rem 2rem;
 }
 
@@ -34,11 +36,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-
-.logo {
-	font-size: 1.5rem;
-	font-weight: bold;
 }
 
 .nav-links {
@@ -51,7 +48,7 @@ body {
 
 .nav-links a {
 	text-decoration: none;
-	color: white;
+	color: #004080;
 	font-size: 1rem;
 	transition: color 0.3s;
 }
@@ -82,8 +79,8 @@ body {
 }
 
 .footer {
-	background-color: #004080;
-	color: white;
+	background-color: white;
+	color: #004080;
 	text-align: center;
 	padding: 1rem 0;
 }

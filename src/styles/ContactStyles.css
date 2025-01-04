@@ -1,3 +1,5 @@
+/* ContactStyles.css */
+
 .social-links {
 	display: flex;
 	justify-content: center;
@@ -6,11 +8,11 @@
 }
 
 .social-links a {
-	color: #d8e7f2;
+	color: #004080;
 	font-size: 1.8rem;
 	transition: color 0.3s;
 }
 
 .social-links a:hover {
-	color: #005fa3;
+	color: #00bfff;
 }

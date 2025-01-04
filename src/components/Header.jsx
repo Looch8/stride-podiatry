@@ -1,4 +1,4 @@
-import logo from '../assets/images/Stride_logo.jpg';
+import logo from '../assets/images/white_logo.jpg';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -7,7 +7,7 @@ const Header = () => {
 			<nav className="navbar">
 				<div className="logo">
 					<img src={logo} alt="Stride Logo" className="logo-image" />
-					<span>Stride Podiatry</span>
+					{/* <span>Stride Podiatry</span> */}
 				</div>
 				<ul className="nav-links">
 					<li>

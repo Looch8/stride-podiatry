@@ -81,11 +81,11 @@ const Contact = () => {
 				<p>Or reach us directly:</p>
 				<ul>
 					<li>
-						<strong>Email:</strong> your-email@example.com
+						<strong>Email:</strong> stridepodiatry@outlook.com.au
 					</li>
 					<li>
 						<a
-							href="https://www.facebook.com"
+							href="https://www.facebook.com/profile.php?id=61570588927493"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -94,7 +94,7 @@ const Contact = () => {
 					</li>
 					<li>
 						<a
-							href="https://www.instagram.com"
+							href="https://www.instagram.com/stride.podiatry/?hl=en"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
