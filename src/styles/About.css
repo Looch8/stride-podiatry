@@ -5,48 +5,50 @@
 	padding: 2rem;
 	background-color: #f5f8fc;
 	color: #333;
-	gap: 2rem; /* Adds consistent spacing between sections */
+	gap: 2rem; /* Consistent spacing between sections */
 }
 
 .profile-photo {
-	width: 150px;
-	height: 150px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
-	margin-bottom: 1.5rem;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 	object-fit: cover; /* Ensures image fills the circle perfectly */
+	margin-bottom: 1.5rem; /* Adds spacing below the image */
 }
 
 .about-text {
-	max-width: 600px;
+	max-width: 800px;
 	text-align: center;
-	padding: 0 1rem; /* Adds padding for smaller screens */
+	padding: 0 1rem;
 }
 
+/* Styling for headings */
 .about-text h1 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	color: #004080;
 	margin-bottom: 1rem;
 }
 
 .about-text p {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	line-height: 1.8;
 	margin-bottom: 1rem;
 	color: #333;
 }
 
-@media (min-width: 768px) {
-	.about-container {
-		flex-direction: row;
-		align-items: flex-start;
-		gap: 3rem;
-	}
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
 	.profile-photo {
-		width: 180px;
-		height: 180px;
+		width: 200px;
+		height: 200px;
 	}
-	.about-text {
-		text-align: left;
+
+	.about-text h1 {
+		font-size: 2rem;
+	}
+
+	.about-text p {
+		font-size: 1rem;
 	}
 }

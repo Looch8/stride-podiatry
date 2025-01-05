@@ -1,9 +1,14 @@
 import '../styles/About.css';
-import profilePhoto from '../assets/images/profile_photo.jpeg';
+import profilePhoto from '../assets/images/profile-pic.jpg';
 
 const About = () => {
 	return (
 		<div className="about-container">
+			<img
+				src={profilePhoto}
+				alt="Luke Wheldale"
+				className="profile-photo"
+			/>
 			<div className="about-text">
 				<h1>About Stride Podiatry</h1>
 				<p>
@@ -47,12 +52,6 @@ const About = () => {
 					friends.
 				</p>
 			</div>
-
-			<img
-				src={profilePhoto}
-				alt="Luke Wheldale"
-				className="profile-photo"
-			/>
 		</div>
 	);
 };
