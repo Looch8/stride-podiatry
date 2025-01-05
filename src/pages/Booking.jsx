@@ -56,7 +56,7 @@ const Booking = () => {
 
 	return (
 		<div className="booking-container">
-			<h1>Book a Podiatry Visit</h1>
+			<h1>Request a Podiatry Visit</h1>
 			<p>
 				Fill out the form below to request a home visit. We’ll get in
 				touch with you shortly to schedule an appointment.

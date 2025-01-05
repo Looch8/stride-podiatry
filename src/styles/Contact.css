@@ -1,36 +1,48 @@
+/* General Styles */
 .contact {
 	padding: 4rem 2rem;
-	background-color: #daedfe;
+	background-color: #f4f7fc; /* Lighter background for contrast */
 	text-align: center;
-	overflow-x: hidden; /* Prevent horizontal scroll */
+	overflow-x: hidden;
 }
 
 .contact h2 {
-	font-size: 2.5rem;
+	font-size: 3rem;
+	font-weight: bold; /* Make it bolder */
 	color: #004080;
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.contact p {
+	font-size: 1.2rem;
+	color: #555;
+	margin-bottom: 2rem;
+	line-height: 1.6;
 }
 
 .contact-form {
 	max-width: 600px;
-	margin: 0 auto 2rem;
+	margin: 0 auto 3rem;
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
-	padding: 1rem; /* Add padding inside the form */
-	box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
+	padding: 1.5rem;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
 }
 
 .contact-form input,
 .contact-form textarea {
 	width: 100%;
-	padding: 1rem;
+	padding: 1.2rem;
 	border: 1px solid #ddd;
 	border-radius: 8px;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	outline: none;
 	transition: border-color 0.3s ease;
-	box-sizing: border-box; /* Prevent width overflow due to padding */
+	box-sizing: border-box;
 }
 
 .contact-form input:focus,
@@ -39,23 +51,25 @@
 }
 
 .contact-form button {
-	padding: 1rem 1.5rem;
-	font-size: 1.2rem;
+	padding: 1.2rem 1.8rem;
+	font-size: 1.3rem;
+	font-weight: bold; /* Make button text bold */
 	color: #fff;
 	background-color: #0077cc;
 	border: none;
 	border-radius: 8px;
 	cursor: pointer;
-	transition: background-color 0.3s ease;
+	transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
 	background-color: #005fa3;
+	transform: scale(1.05); /* Add a subtle scaling effect */
 }
 
 .contact-info {
-	margin-top: 2rem;
-	font-size: 1.1rem;
+	margin-top: 3rem;
+	font-size: 1.2rem;
 	color: #555;
 }
 
@@ -63,11 +77,12 @@
 	list-style: none;
 	padding: 0;
 	margin: 1rem 0 0;
-	text-align: left; /* Align the list text to the left */
+	text-align: left;
 }
 
 .contact-info li {
-	margin-bottom: 0.75rem;
+	margin-bottom: 1rem;
+	font-weight: bold;
 }
 
 .contact-info a {
@@ -78,24 +93,25 @@
 
 .contact-info a:hover {
 	text-decoration: underline;
+	font-weight: normal; /* Decrease weight on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
 	.contact {
-		padding: 2rem 1rem;
+		padding: 3rem 1rem;
 	}
 
 	.contact h2 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	.contact-form button {
-		font-size: 1rem;
-		padding: 0.8rem 1rem;
+		font-size: 1.1rem;
+		padding: 1rem 1.5rem;
 	}
 
 	.contact-info {
-		font-size: 1rem;
+		font-size: 1.1rem;
 	}
 }

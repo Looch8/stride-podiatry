@@ -47,7 +47,11 @@ const Contact = () => {
 
 	return (
 		<section className="contact">
-			<h2>Contact Us</h2>
+			<h2>Send Us Your Enquiry</h2>
+			<p>
+				Have a question or need more information? Fill out the form
+				below and we'll get back to you as soon as possible.
+			</p>
 
 			<form className="contact-form" onSubmit={handleSubmit}>
 				<input
