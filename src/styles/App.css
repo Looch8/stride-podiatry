@@ -54,7 +54,7 @@ body {
 }
 
 /* Book Now section */
-.book-now {
+/* .book-now {
 	margin-top: 2rem;
 	padding: 1.5rem;
 	background-color: #004080;
@@ -62,8 +62,8 @@ body {
 	border-radius: 8px;
 	text-align: center;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
+} */
+/* 
 .book-now h3 {
 	font-size: 1.8rem;
 	margin-bottom: 0.5rem;
@@ -89,4 +89,4 @@ body {
 
 .book-now-button:hover {
 	background-color: #0086b3;
-}
+} */
