@@ -1,23 +1,27 @@
 import '../styles/Home.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 	return (
 		<main className="main-content">
 			<section className="home-section">
 				<h2>Welcome to Stride Podiatry</h2>
-				<p>Providing expert podiatry care directly to your doorstep.</p>
+				<h3>Servicing all of Adelaide, South Australia.</h3>
+				<p>
+					We offer home visits for a range of podiatry services,
+					including assessments, treatments, and care for conditions
+					such as bunions, ingrown toenails, and plantar fasciitis.
+				</p>
 				<div className="book-now">
-					<h3>Ready to Take the First Step?</h3>
+					<h2>Ready to Take the First Step?</h2>
 					<p>
-						Book your appointment today for professional podiatry
-						care in the comfort of your home!
+						Book your home visit appointment today and enjoy
+						professional podiatry care in the comfort of your home!
 					</p>
-					<a
-						href="https://stride-podiatry.au4.cliniko.com/bookings"
-						className="book-now-button"
-					>
+
+					<Link to="/booking" className="book-now-button">
 						Book Now
-					</a>
+					</Link>
 				</div>
 			</section>
 		</main>

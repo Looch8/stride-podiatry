@@ -12,6 +12,12 @@
 	margin-bottom: 1.5rem;
 }
 
+.home-section h3 {
+	font-size: 2rem;
+	color: #0077cc;
+	margin-bottom: 1rem;
+}
+
 .home-section p {
 	font-size: 1.2rem;
 	color: #555;
@@ -32,7 +38,7 @@
 	margin: 0 auto;
 }
 
-.book-now h3 {
+.book-now h2 {
 	font-size: 2rem;
 	color: #0077cc;
 	margin-bottom: 1rem;
@@ -53,11 +59,17 @@
 	background-color: #0077cc;
 	border-radius: 8px;
 	text-decoration: none;
-	transition: background-color 0.3s ease;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .book-now-button:hover {
 	background-color: #005fa3;
+	transform: translateY(-2px);
+}
+
+.book-now-button:active {
+	transform: translateY(0);
 }
 
 /* Responsive Design */
@@ -70,16 +82,20 @@
 		font-size: 2rem;
 	}
 
+	.home-section h3 {
+		font-size: 1.5rem;
+	}
+
 	.home-section p {
 		font-size: 1rem;
 	}
 
-	.book-now h3 {
+	.book-now h2 {
 		font-size: 1.5rem;
 	}
 
 	.book-now p {
-		font-size: 0.9rem;
+		font-size: 1rem;
 	}
 
 	.book-now-button {
