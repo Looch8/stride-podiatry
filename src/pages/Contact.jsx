@@ -3,8 +3,6 @@ import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
 
 const Contact = () => {
-	console.log(import.meta.env);
-
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
