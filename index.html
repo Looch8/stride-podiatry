@@ -17,6 +17,17 @@
 		<title>Stride Podiatry</title>
 		<script type="module" src="./public/env.js"></script>
 		<!-- Load env.js first -->
+
+		<!-- Handle query string for GitHub Pages routing -->
+		<script>
+			(function () {
+				var query = window.location.search;
+				if (query) {
+					var route = query.substring(1); // Remove '?' and get the path
+					window.history.replaceState({}, '', route); // Replace URL without reloading
+				}
+			})();
+		</script>
 	</head>
 	<body class="h-full">
 		<div id="root"></div>
