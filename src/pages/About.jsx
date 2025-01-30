@@ -1,5 +1,5 @@
 import '../styles/About.css';
-import profilePhoto from '../assets/images/profile-pic.jpg';
+import profilePhoto from '../assets/images/profile-pic.webp';
 
 const About = () => {
 	return (

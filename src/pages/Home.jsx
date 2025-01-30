@@ -1,6 +1,6 @@
 import '../styles/Home.css';
 import { Link } from 'react-router-dom';
-import profilePic from '../assets/images/profile-pic.jpg';
+import profilePic from '../assets/images/profile-pic.webp';
 
 const Home = () => {
 	return (
