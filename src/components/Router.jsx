@@ -6,6 +6,7 @@ import Services from '../pages/Services';
 import About from '../pages/About';
 import Booking from '../pages/Booking';
 import Contact from '../pages/Contact';
+import FAQ from '../pages/FAQ';
 
 const Router = () => {
 	return (
@@ -15,6 +16,7 @@ const Router = () => {
 			<Route path="/about-us" element={<About />} />
 			<Route path="/booking" element={<Booking />} />
 			<Route path="/contact-us" element={<Contact />} />
+			<Route path="/faq" element={<FAQ />} />
 		</Routes>
 	);
 };

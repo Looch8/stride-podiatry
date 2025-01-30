@@ -47,6 +47,11 @@ const Header = () => {
 							Contact Us
 						</Link>
 					</li>
+					<li>
+						<Link to="/faq" onClick={toggleMobileMenu}>
+							FAQ
+						</Link>
+					</li>
 				</ul>
 			</nav>
 		</header>

@@ -85,7 +85,17 @@ const Contact = () => {
 				<p>Or reach us directly:</p>
 				<ul>
 					<li>
-						<strong>Email:</strong> stridepodiatry@outlook.com.au
+						📞 Call us at{' '}
+						<strong>
+							<a href="tel:+61468518993">0468 518 993</a>
+						</strong>
+						<br></br>
+						📧 Email us at{' '}
+						<strong>
+							<a href="mailto:stridepodiatry@outlook.com.au">
+								stridepodiatry@outlook.com.au
+							</a>
+						</strong>
 					</li>
 					<li>
 						<a

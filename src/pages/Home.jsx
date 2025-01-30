@@ -8,7 +8,9 @@ const Home = () => {
 			{/* Centered Title & Slogan */}
 			<section className="hero-section">
 				<h1 className="title">Stride Podiatry</h1>
-				<h2 className="subtitle">We Come to You!</h2>
+				<h2 className="subtitle">
+					Mobile Podiatrist Adelaide – We Come to You!
+				</h2>
 			</section>
 
 			{/* Image & Main Content Section */}
@@ -38,7 +40,30 @@ const Home = () => {
 						you’re outside this region, feel free to contact us—
 						<em>we may still be able to help.</em>
 					</p>
+					<p>
+						📞 Call us at{' '}
+						<strong>
+							<a href="tel:+61468518993">0468 518 993</a>
+						</strong>
+						<br></br>
+						📧 Email us at{' '}
+						<strong>
+							<a href="mailto:stridepodiatry@outlook.com.au">
+								stridepodiatry@outlook.com.au
+							</a>
+						</strong>
+					</p>
 				</div>
+			</section>
+
+			{/* FAQ Preview Section */}
+			<section className="faq-preview">
+				<h3>Have Questions?</h3>
+				<p>
+					Visit our <Link to="/faq">FAQ Page</Link> for answers to
+					common questions about our services, Medicare, NDIS, and
+					more.
+				</p>
 			</section>
 
 			{/* Centered Call to Action */}
