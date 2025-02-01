@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta http-equiv="refresh" content="0; URL='/'" />
-		<script>
-			var path = window.location.pathname;
-			window.location.replace('/#' + path);
-		</script>
+		<meta http-equiv="refresh" content="0;url=/" />
 	</head>
 	<body>
 		<p>Redirecting...</p>
+		<script>
+			window.location.replace('/?' + window.location.pathname);
+		</script>
 	</body>
 </html>
