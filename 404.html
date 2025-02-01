@@ -9,10 +9,7 @@
 		<p>Redirecting...</p>
 		<script>
 			// Preserve the current path when refreshing
-			let currentPath =
-				window.location.pathname +
-				window.location.search +
-				window.location.hash;
+			let currentPath = window.location.pathname + window.location.search;
 			window.location.replace('/' + currentPath);
 		</script>
 	</body>
