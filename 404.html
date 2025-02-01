@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<meta charset="UTF-8" />
+		<title>Redirecting...</title>
 		<meta http-equiv="refresh" content="0;url=/" />
 	</head>
 	<body>
 		<p>Redirecting...</p>
 		<script>
-			window.location.replace('/?' + window.location.pathname);
+			// Preserve the current path when refreshing
+			let currentPath =
+				window.location.pathname +
+				window.location.search +
+				window.location.hash;
+			window.location.replace('/' + currentPath);
 		</script>
 	</body>
 </html>
