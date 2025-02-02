@@ -27,13 +27,6 @@ const Booking = () => {
 			reason_for_visit: formData.reason,
 		};
 
-		console.log('EmailJS Service ID:', window.env?.VITE_EMAILJS_SERVICE_ID);
-		console.log(
-			'EmailJS Template ID:',
-			window.env?.VITE_EMAILJS_BOOKING_TEMPLATE_ID
-		);
-		console.log('EmailJS Public Key:', window.env?.VITE_EMAILJS_PUBLIC_KEY);
-
 		emailjs
 			.send(
 				window.env.VITE_EMAILJS_SERVICE_ID,
@@ -41,33 +34,28 @@ const Booking = () => {
 				templateParams,
 				window.env.VITE_EMAILJS_PUBLIC_KEY
 			)
-			.then(
-				() => {
-					alert('Your booking request has been sent!');
-					setFormData({
-						fullName: '',
-						phone: '',
-						email: '',
-						suburb: '',
-						reason: '',
-					});
-				},
-				(error) => {
-					console.error('Error sending booking request:', error);
-					alert(
-						'Failed to send your booking request. Please try again later.'
-					);
-				}
-			);
+			.then(() => {
+				alert('Your booking request has been sent!');
+				setFormData({
+					fullName: '',
+					phone: '',
+					email: '',
+					suburb: '',
+					reason: '',
+				});
+			})
+			.catch((error) => {
+				console.error('Error sending booking request:', error);
+				alert(
+					'Failed to send your booking request. Please try again later.'
+				);
+			});
 	};
 
 	return (
 		<div className="booking-container">
-			<h1>Request a Podiatry Visit</h1>
-			<p>
-				Fill out the form below to request a home visit. We’ll get in
-				touch with you shortly to schedule an appointment.
-			</p>
+			<h1>Request a Home Visit</h1>
+			<p>We’ll contact you to schedule an appointment at your home.</p>
 			<form className="booking-form" onSubmit={handleSubmit}>
 				<div className="form-group">
 					<label htmlFor="fullName">Full Name *</label>
@@ -127,12 +115,12 @@ const Booking = () => {
 						rows="5"
 						value={formData.reason}
 						onChange={handleChange}
-						placeholder="Provide details about the reason for your visit (e.g., foot pain, orthotic review, nail care)"
+						placeholder="Foot pain, orthotic review, nail care, etc."
 					></textarea>
 				</div>
 
 				<button type="submit" className="submit-button">
-					Request Booking
+					Book Appointment
 				</button>
 			</form>
 		</div>

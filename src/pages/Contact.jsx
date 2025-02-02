@@ -17,7 +17,6 @@ const Contact = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
-		// Map formData to match the EmailJS template variables
 		const templateParams = {
 			from_name: formData.name,
 			from_email: formData.email,
@@ -31,28 +30,58 @@ const Contact = () => {
 				templateParams,
 				window.env.VITE_EMAILJS_PUBLIC_KEY
 			)
-			.then(
-				() => {
-					alert('Your message has been sent!');
-					setFormData({ name: '', email: '', message: '' });
-				},
-				(error) => {
-					console.error('Error sending email:', error);
-					alert(
-						'Failed to send your message. Please try again later.'
-					);
-				}
-			);
+			.then(() => {
+				alert('Your message has been sent!');
+				setFormData({ name: '', email: '', message: '' });
+			})
+			.catch((error) => {
+				console.error('Error sending email:', error);
+				alert('Failed to send your message. Please try again later.');
+			});
 	};
 
 	return (
 		<section className="contact">
-			<h2>Send Us Your Enquiry</h2>
+			<h2>Contact Stride Podiatry</h2>
 			<p>
-				Have a question or need more information? Fill out the form
-				below and we'll get back to you as soon as possible.
+				Have a question? Need more information? Call us, email us, or
+				follow us on social media!
 			</p>
 
+			<div className="contact-info">
+				<ul>
+					<li>
+						📞 <strong>Call us:</strong>{' '}
+						<a href="tel:+61468518993">0468 518 993</a>
+					</li>
+					<li>
+						📧 <strong>Email us:</strong>{' '}
+						<a href="mailto:stridepodiatry@outlook.com.au">
+							stridepodiatry@outlook.com.au
+						</a>
+					</li>
+					<li>
+						📱 <strong>Follow us:</strong>{' '}
+						<a
+							href="https://www.facebook.com/profile.php?id=61570588927493"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Facebook
+						</a>{' '}
+						|{' '}
+						<a
+							href="https://www.instagram.com/stride.podiatry/?hl=en"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Instagram
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<h3>Or send us a message:</h3>
 			<form className="contact-form" onSubmit={handleSubmit}>
 				<input
 					type="text"
@@ -80,43 +109,6 @@ const Contact = () => {
 				/>
 				<button type="submit">Send Message</button>
 			</form>
-
-			<div className="contact-info">
-				<p>Or reach us directly:</p>
-				<ul>
-					<li>
-						📞 Call us at{' '}
-						<strong>
-							<a href="tel:+61468518993">0468 518 993</a>
-						</strong>
-						<br></br>
-						📧 Email us at{' '}
-						<strong>
-							<a href="mailto:stridepodiatry@outlook.com.au">
-								stridepodiatry@outlook.com.au
-							</a>
-						</strong>
-					</li>
-					<li>
-						<a
-							href="https://www.facebook.com/profile.php?id=61570588927493"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Facebook
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://www.instagram.com/stride.podiatry/?hl=en"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							Instagram
-						</a>
-					</li>
-				</ul>
-			</div>
 		</section>
 	);
 };
