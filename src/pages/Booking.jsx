@@ -27,6 +27,13 @@ const Booking = () => {
 			reason_for_visit: formData.reason,
 		};
 
+		console.log('EmailJS Service ID:', window.env?.VITE_EMAILJS_SERVICE_ID);
+		console.log(
+			'EmailJS Template ID:',
+			window.env?.VITE_EMAILJS_BOOKING_TEMPLATE_ID
+		);
+		console.log('EmailJS Public Key:', window.env?.VITE_EMAILJS_PUBLIC_KEY);
+
 		emailjs
 			.send(
 				window.env.VITE_EMAILJS_SERVICE_ID,
