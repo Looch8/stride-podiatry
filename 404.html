@@ -7,8 +7,13 @@
 			// Get the path from the URL
 			const path = window.location.pathname;
 
-			// Redirect to the same path without the hash
-			window.location.replace(path);
+			// If we're on the home page, don't redirect
+			if (path === '/') {
+				window.location.replace('/');
+			} else {
+				// For other paths, redirect to the hash-based route
+				window.location.replace('/#' + path);
+			}
 		</script>
 	</head>
 	<body>
