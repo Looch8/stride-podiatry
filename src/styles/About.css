@@ -2,50 +2,170 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 2rem;
-	background-color: #f5f8fc;
+	padding: 4rem 2rem;
+	background-color: #f8f9fa;
 	color: #333;
-	gap: 2rem; /* Consistent spacing between sections */
+	gap: 4rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.about-section {
+	display: flex;
+	align-items: center;
+	gap: 4rem;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.about-section:nth-child(even) {
+	flex-direction: row-reverse;
 }
 
 .profile-photo {
-	width: 250px;
-	height: 250px;
-	border-radius: 50%;
-	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-	object-fit: cover; /* Ensures image fills the circle perfectly */
-	margin-bottom: 1.5rem; /* Adds spacing below the image */
+	width: 300px;
+	height: 300px;
+	border-radius: 20px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	object-fit: cover;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 4px solid white;
+	flex-shrink: 0;
+}
+
+.profile-photo:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .about-text {
-	max-width: 800px;
-	text-align: center;
-	padding: 0 1rem;
+	max-width: 600px;
+	text-align: left;
+	padding: 2rem;
+	background: white;
+	border-radius: 20px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	flex: 1;
 }
 
-/* Styling for headings */
+.about-text:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
 .about-text h1 {
 	font-size: 2.5rem;
 	color: #004080;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
+	position: relative;
+	padding-bottom: 1rem;
+}
+
+.about-text h1::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 60px;
+	height: 4px;
+	background-color: #0077cc;
+	border-radius: 2px;
 }
 
 .about-text p {
 	font-size: 1.2rem;
 	line-height: 1.8;
-	margin-bottom: 1rem;
-	color: #333;
+	margin-bottom: 1.5rem;
+	color: #555;
+}
+
+.about-text p:last-child {
+	margin-bottom: 0;
+}
+
+/* Add a decorative background pattern */
+.about-container::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: radial-gradient(
+		circle at 1px 1px,
+		#e9ecef 1px,
+		transparent 0
+	);
+	background-size: 40px 40px;
+	opacity: 0.5;
+	z-index: -1;
 }
 
 /* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+	.about-container {
+		padding: 3rem 1.5rem;
+		gap: 3rem;
+	}
+
+	.about-section {
+		gap: 2rem;
+	}
+
+	.profile-photo {
+		width: 250px;
+		height: 250px;
+	}
+
+	.about-text {
+		padding: 1.5rem;
+	}
+
+	.about-text h1 {
+		font-size: 2.2rem;
+	}
+}
+
 @media (max-width: 768px) {
+	.about-container {
+		padding: 2rem 1rem;
+		gap: 2rem;
+	}
+
+	.about-section {
+		flex-direction: column !important;
+		gap: 2rem;
+		text-align: center;
+	}
+
 	.profile-photo {
 		width: 200px;
 		height: 200px;
 	}
 
+	.about-text {
+		padding: 1.5rem;
+	}
+
 	.about-text h1 {
 		font-size: 2rem;
+	}
+
+	.about-text p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+}
+
+@media (max-width: 480px) {
+	.profile-photo {
+		width: 180px;
+		height: 180px;
+	}
+
+	.about-text h1 {
+		font-size: 1.8rem;
 	}
 
 	.about-text p {
