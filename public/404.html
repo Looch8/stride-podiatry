@@ -4,12 +4,23 @@
 		<meta charset="UTF-8" />
 		<title>Redirecting...</title>
 		<script>
-			// Redirect to the correct hash URL
-			let path = window.location.pathname;
-			window.location.replace('/#' + path);
+			// Get the path from the URL
+			const path = window.location.pathname;
+
+			// If we're on the home page, don't redirect
+			if (path === '/') {
+				window.location.replace('/');
+			} else {
+				// For other paths, redirect to the hash-based route
+				window.location.replace('/#' + path);
+			}
 		</script>
 	</head>
 	<body>
 		<h1>Redirecting...</h1>
+		<p>
+			If you are not redirected automatically, please
+			<a href="/">click here</a>.
+		</p>
 	</body>
 </html>
