@@ -1,27 +1,50 @@
-import '../styles/ContactStyles.css';
+import { Link } from 'react-router-dom';
+import '../styles/Footer.css';
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
 		<footer className="footer">
-			<div className="social-links">
-				<a
-					href="https://www.facebook.com/profile.php?id=61570588927493"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<i className="fab fa-facebook-square"></i>
-				</a>
-				<a
-					href="https://www.instagram.com/stride.podiatry/?hl=en"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<i className="fab fa-instagram"></i>
-				</a>
+			<div className="footer-content">
+				<div className="footer-contact">
+					<a href="tel:+61468518993" className="contact-link">
+						<i className="fas fa-phone"></i>
+						<span>0468 518 993</span>
+					</a>
+					<a
+						href="mailto:stridepodiatry@outlook.com.au"
+						className="contact-link"
+						d
+					>
+						<i className="fas fa-envelope"></i>
+						<span>stridepodiatry@outlook.com.au</span>
+					</a>
+				</div>
+
+				<div className="social-links">
+					<a
+						href="https://www.facebook.com/profile.php?id=61570588927493"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="Facebook"
+					>
+						<i className="fab fa-facebook-square"></i>
+					</a>
+					<a
+						href="https://www.instagram.com/stride.podiatry/?hl=en"
+						target="_blank"
+						rel="noreferrer"
+						aria-label="Instagram"
+					>
+						<i className="fab fa-instagram"></i>
+					</a>
+				</div>
+
+				<p className="copyright">
+					&copy; {currentYear} Stride Podiatry. All Rights Reserved.
+				</p>
 			</div>
-			<p>&copy; {currentYear} Stride Podiatry. All Rights Reserved.</p>
 		</footer>
 	);
 };
