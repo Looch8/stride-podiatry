@@ -1,9 +1,18 @@
 .header {
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
 	color: #004080;
 	padding: 1rem 2rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	backdrop-filter: blur(5px); /* Add blur effect to background */
+}
+
+body {
+	padding-top: 80px;
 }
 
 .navbar {
@@ -57,12 +66,20 @@
 		flex-direction: column;
 		position: absolute;
 		top: 100%;
+		left: 0;
 		right: 0;
-		background-color: white;
+		background-color: rgba(
+			255,
+			255,
+			255,
+			0.98
+		); /* Semi-transparent white */
 		width: 100%;
 		padding: 1rem 0;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		text-align: center;
+		z-index: 1000;
+		backdrop-filter: blur(5px); /* Add blur effect to background */
 	}
 
 	.nav-links.active {

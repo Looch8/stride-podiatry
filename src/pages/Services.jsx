@@ -4,10 +4,12 @@ import '../styles/Services.css';
 // Import images for each service
 import generalCareImg from '../assets/images/general-foot-care.jpg';
 import ingrownNailImg from '../assets/images/ingrown-nail.jpg';
-import diabetesCareImg from '../assets/images/diabetes-care.jpg';
-import biomechanicsImg from '../assets/images/biomechanics.jpg';
+import diabetesCareImg from '../assets/images/diabetesCare.jpg';
+import biomechanicsImg from '../assets/images/biomechanicsImg.jpg';
 import footPainImg from '../assets/images/foot-pain.jpg';
 import shoewearImg from '../assets/images/shoewear.jpg';
+import orthoticsImg from '../assets/images/orthoticsImg.jpg';
+import sportsPodiatryImg from '../assets/images/sportsPodiatryImg.jpeg';
 
 const serviceData = [
 	{
@@ -43,6 +45,14 @@ const serviceData = [
 			'Treatment involves gait assessments, orthotics, and strengthening exercises to prevent pain and injury.',
 	},
 	{
+		title: 'Custom Orthotics',
+		image: orthoticsImg,
+		description:
+			'Personalised orthotic devices designed to support your feet, correct biomechanical issues, and relieve pain.',
+		details:
+			'Custom-made orthotics based on detailed biomechanical assessment, foot shape, and your specific needs. Suitable for various conditions including flat feet, high arches, and sports-related issues.',
+	},
+	{
 		title: 'Foot Pain',
 		image: footPainImg,
 		description:
@@ -57,6 +67,14 @@ const serviceData = [
 			'Personalised recommendations to ensure your footwear supports your lifestyle and foot health.',
 		details:
 			'Assessing foot shape, arch support, and gait pattern to recommend appropriate footwear for comfort and injury prevention.',
+	},
+	{
+		title: 'Sports Podiatry',
+		image: sportsPodiatryImg,
+		description:
+			'Specialised care for athletes and sports enthusiasts to prevent and treat sports-related foot conditions.',
+		details:
+			'Includes sports-specific assessments, injury prevention strategies, and treatment for common sports-related foot and lower limb conditions.',
 	},
 ];
 
