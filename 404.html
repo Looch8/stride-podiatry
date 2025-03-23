@@ -6,19 +6,16 @@
 		<script>
 			// Get the path from the URL
 			const path = window.location.pathname;
-			// Remove the base path if it exists
-			const basePath = '/stride-podiatry';
-			const cleanPath = path.replace(basePath, '');
 
 			// Redirect to the main app with the path
-			window.location.replace(basePath + '/#' + cleanPath);
+			window.location.replace('/#' + path);
 		</script>
 	</head>
 	<body>
 		<h1>Redirecting...</h1>
 		<p>
 			If you are not redirected automatically, please
-			<a href="/stride-podiatry/">click here</a>.
+			<a href="/">click here</a>.
 		</p>
 	</body>
 </html>
