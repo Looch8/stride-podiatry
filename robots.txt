@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /services
+Allow: /about-us
+Allow: /booking
+Allow: /contact-us
+Allow: /faq
+Sitemap: https://stride-podiatry.com.au/sitemap.xml 
