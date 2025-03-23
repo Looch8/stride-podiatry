@@ -4,7 +4,7 @@ import '../styles/Services.css';
 // Import images for each service
 import generalCareImg from '../assets/images/general-foot-care.jpg';
 import ingrownNailImg from '../assets/images/ingrown-nail.jpg';
-import diabetesCareImg from '../assets/images/diabetesCare.jpg';
+import diabetesCareImg from '../assets/images/diabetesCare2.png';
 import biomechanicsImg from '../assets/images/biomechanicsImg.jpg';
 import footPainImg from '../assets/images/foot-pain.jpg';
 import shoewearImg from '../assets/images/shoewear.jpg';
@@ -91,35 +91,62 @@ const Services = () => {
 
 	return (
 		<section className="services">
-			<h2>Our Services</h2>
-			<ul className="services-list">
-				{serviceData.map((service, index) => (
-					<li key={index} onClick={() => openModal(service)}>
-						<h3>{service.title}</h3>
-						<p>{service.description}</p>
-					</li>
-				))}
-			</ul>
-
-			{/* Popup Modal */}
-			{selectedService && (
-				<div className="modal-overlay" onClick={closeModal}>
-					<div
-						className="modal-content"
-						onClick={(e) => e.stopPropagation()}
-					>
-						<span className="close-btn" onClick={closeModal}>
-							&times;
-						</span>
-						<img
-							src={selectedService.image}
-							alt={selectedService.title}
-						/>
-						<h3>{selectedService.title}</h3>
-						<p>{selectedService.details}</p>
-					</div>
+			<div className="services-container">
+				<div className="services-header">
+					<h2>Our Services</h2>
+					<p>
+						Comprehensive foot care solutions tailored to your
+						needs. Click on any service to learn more.
+					</p>
 				</div>
-			)}
+
+				<div className="services-grid">
+					{serviceData.map((service, index) => (
+						<div
+							key={index}
+							className="service-card"
+							onClick={() => openModal(service)}
+						>
+							<h3>{service.title}</h3>
+							<p>{service.description}</p>
+							<div className="service-image">
+								<img src={service.image} alt={service.title} />
+							</div>
+						</div>
+					))}
+				</div>
+
+				{/* Modal */}
+				{selectedService && (
+					<div className="modal-overlay" onClick={closeModal}>
+						<div
+							className="modal-content"
+							onClick={(e) => e.stopPropagation()}
+						>
+							<span className="close-btn" onClick={closeModal}>
+								&times;
+							</span>
+							<div className="modal-header">
+								<h3>{selectedService.title}</h3>
+							</div>
+							<div className="modal-image">
+								<img
+									src={selectedService.image}
+									alt={selectedService.title}
+								/>
+							</div>
+							<div className="modal-body">
+								<p className="modal-description">
+									{selectedService.description}
+								</p>
+								<p className="modal-details">
+									{selectedService.details}
+								</p>
+							</div>
+						</div>
+					</div>
+				)}
+			</div>
 		</section>
 	);
 };

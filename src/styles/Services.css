@@ -1,145 +1,229 @@
 .services {
-	padding: 4rem 2rem;
-	background-color: #f9f9f9;
+	padding: 6rem 2rem;
+	background-color: #f8f9fa;
+	min-height: 100vh;
+}
+
+.services-container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.services-header {
 	text-align: center;
+	margin-bottom: 4rem;
 }
 
-/* Headings */
-.services h2 {
-	font-size: 2.5rem;
-	margin-bottom: 2rem;
-	color: #004080;
-}
-
-.services-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	gap: 2rem;
-}
-
-.services-list li {
-	background-color: #fff;
-	border: 1px solid #ddd;
-	border-radius: 12px;
-	padding: 2rem;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-	cursor: pointer;
-}
-
-.services-list li:hover {
-	transform: translateY(-8px);
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.services-list h3 {
-	font-size: 1.75rem;
+.services-header h2 {
+	font-size: 3.5rem;
 	color: #004080;
 	margin-bottom: 1rem;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.services-list p {
-	font-size: 1rem;
-	color: #555;
-	line-height: 1.8;
+.services-header p {
+	font-size: 1.2rem;
+	color: #666;
+	max-width: 600px;
+	margin: 0 auto;
 }
 
-/* Popup Modal */
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	padding: 1rem;
+}
+
+.service-card {
+	background: white;
+	border-radius: 20px;
+	padding: 2rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.service-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+	font-size: 1.5rem;
+	color: #004080;
+	margin: 0;
+}
+
+.service-card p {
+	color: #666;
+	margin: 0;
+	line-height: 1.6;
+}
+
+.service-image {
+	margin-top: auto;
+	height: 200px;
+	overflow: hidden;
+	border-radius: 12px;
+}
+
+.service-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+	transform: scale(1.05);
+}
+
+/* Modal Styles */
 .modal-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.5);
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 	z-index: 1000;
+	animation: fadeIn 0.3s ease;
 }
 
 .modal-content {
 	background: white;
+	border-radius: 24px;
 	padding: 2rem;
-	border-radius: 12px;
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-	text-align: center;
+	max-width: 800px;
 	width: 90%;
-	max-width: 500px;
+	max-height: 90vh;
+	overflow-y: auto;
 	position: relative;
-	animation: fadeIn 0.3s ease-in-out;
+	animation: slideIn 0.3s ease;
 }
 
-.modal-content img {
-	width: 100%;
-	height: 250px;
-	object-fit: cover;
-	border-radius: 8px;
-	margin-bottom: 1rem;
+.modal-header {
+	margin-bottom: 1.5rem;
 }
 
-.modal-content h3 {
-	font-size: 1.8rem;
+.modal-header h3 {
+	font-size: 2rem;
 	color: #004080;
-	margin-bottom: 1rem;
+	margin: 0;
 }
 
-.modal-content p {
-	font-size: 1rem;
-	color: #555;
+.modal-image {
+	width: 100%;
+	height: 300px;
+	border-radius: 16px;
+	overflow: hidden;
+	margin-bottom: 1.5rem;
+}
+
+.modal-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.modal-body {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.modal-description {
+	font-size: 1.2rem;
+	color: #004080;
+	font-weight: 500;
+}
+
+.modal-details {
+	color: #666;
 	line-height: 1.6;
 }
 
-/* Close Button */
 .close-btn {
 	position: absolute;
-	top: 10px;
-	right: 15px;
-	font-size: 1.8rem;
+	top: 1rem;
+	right: 1rem;
+	font-size: 2rem;
+	color: #666;
 	cursor: pointer;
-	color: #555;
 	transition: color 0.3s ease;
 }
 
 .close-btn:hover {
-	color: red;
+	color: #004080;
 }
 
-/* Fade In Animation */
 @keyframes fadeIn {
 	from {
 		opacity: 0;
-		transform: translateY(-20px);
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	to {
 		transform: translateY(0);
+		opacity: 1;
 	}
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-	.services h2 {
-		font-size: 2rem;
+@media (max-width: 900px) {
+	.services {
+		padding: 4rem 1rem;
 	}
 
-	.services-list li {
-		padding: 1.5rem;
+	.services-header h2 {
+		font-size: 2.8rem;
 	}
 
-	.services-list h3 {
-		font-size: 1.5rem;
-	}
-
-	.services-list p {
-		font-size: 0.9rem;
+	.services-grid {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	}
 
 	.modal-content {
-		width: 90%;
+		width: 95%;
 		padding: 1.5rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.services-header h2 {
+		font-size: 2.2rem;
+	}
+
+	.service-card {
+		padding: 1.5rem;
+	}
+
+	.service-image {
+		height: 180px;
+	}
+
+	.modal-header h3 {
+		font-size: 1.8rem;
+	}
+
+	.modal-image {
+		height: 250px;
 	}
 }
