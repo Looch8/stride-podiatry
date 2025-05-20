@@ -91,8 +91,8 @@ const Home = () => {
 							</p>
 							<p>
 								📧 <strong>Email:</strong>{' '}
-								<a href="mailto:stridepodiatry@outlook.com.au">
-									stridepodiatry@outlook.com.au
+								<a href="mailto:luke@stride-podiatry.com.au">
+									luke@stride-podiatry.com.au
 								</a>
 							</p>
 						</div>

@@ -13,12 +13,12 @@ const Footer = () => {
 						<span>0468 518 993</span>
 					</a>
 					<a
-						href="mailto:stridepodiatry@outlook.com.au"
+						href="mailto:luke@stride-podiatry.com.au"
 						className="contact-link"
 						d
 					>
 						<i className="fas fa-envelope"></i>
-						<span>stridepodiatry@outlook.com.au</span>
+						<span>luke@stride-podiatry.com.au</span>
 					</a>
 				</div>
 

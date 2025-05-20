@@ -85,8 +85,8 @@ const Contact = () => {
 									<span className="icon">📧</span>
 									<div className="contact-details">
 										<strong>Email us</strong>
-										<a href="mailto:stridepodiatry@outlook.com.au">
-											stridepodiatry@outlook.com.au
+										<a href="mailto:luke@stride-podiatry.com.au">
+											luke@stride-podiatry.com.au
 										</a>
 									</div>
 								</div>
