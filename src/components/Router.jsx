@@ -7,6 +7,7 @@ import About from '../pages/About';
 import Booking from '../pages/Booking';
 import Contact from '../pages/Contact';
 import FAQ from '../pages/FAQ';
+import Referral from '../pages/Referral';
 
 const Router = () => {
 	return (
@@ -17,6 +18,7 @@ const Router = () => {
 			<Route path="/booking" element={<Booking />} />
 			<Route path="/contact-us" element={<Contact />} />
 			<Route path="/faq" element={<FAQ />} />
+			<Route path="/referral" element={<Referral />} />
 		</Routes>
 	);
 };

@@ -66,6 +66,11 @@ const Header = () => {
 						</Link>
 					</li>
 					<li>
+						<Link to="/referral" onClick={closeMobileMenu}>
+							Referrals
+						</Link>
+					</li>
+					<li>
 						<Link to="/faq" onClick={closeMobileMenu}>
 							FAQ
 						</Link>

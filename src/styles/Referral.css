@@ -1,0 +1,21 @@
+.referral-container {
+	max-width: 800px;
+	margin: 4rem auto;
+	padding: 2rem;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+	font-size: 1.2rem;
+	line-height: 1.8;
+	color: #333;
+}
+
+.referral-container h1 {
+	color: #004080;
+	margin-bottom: 1.5rem;
+}
+
+.referral-container a {
+	color: #0077cc;
+	text-decoration: underline;
+}
