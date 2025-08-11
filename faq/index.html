@@ -1,27 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full bg-gray-100">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Mobile Podiatry FAQs | Stride Podiatry</title>
-		<meta
-			name="description"
-			content="Answers to common questions about mobile podiatry in Adelaide: fees, Medicare CDM, NDIS, what to expect at a home visit."
-		/>
-		<link rel="canonical" href="https://stride-podiatry.com.au/faq" />
-		<meta name="robots" content="index, follow" />
 
-		<meta property="og:site_name" content="Stride Podiatry" />
-		<meta property="og:title" content="Mobile Podiatry FAQs" />
-		<meta
-			property="og:description"
-			content="Everything you need to know about mobile podiatry: visit length, what we bring, Medicare CDM, NDIS and more."
-		/>
-		<meta property="og:url" content="https://stride-podiatry.com.au/faq" />
-		<meta property="og:type" content="website" />
-		<meta
-			property="og:image"
-			content="https://stride-podiatry.com.au/assets/images/Stride_logo.jpg"
-		/>
+		<!-- Base URL for relative links -->
+		<base href="/" />
 
 		<link
 			rel="icon"
@@ -29,15 +12,96 @@
 			href="/assets/images/Stride_logo.jpg"
 		/>
 
-		<meta http-equiv="refresh" content="0; url=/?p=/faq" />
-		<script>
-			location.replace('/?p=/faq');
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Nunito:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Request Google to Index Properly -->
+		<meta name="robots" content="index, follow" />
+
+		<!-- Canonical URL (Preferred URL for Google) -->
+		<link rel="canonical" href="https://stride-podiatry.com.au/" />
+
+		<!-- SEO Meta Tags -->
+		<title>Stride Podiatry | Mobile Podiatrist Adelaide</title>
+		<meta
+			name="description"
+			content="Stride Podiatry offers expert mobile podiatry services in Adelaide. No referral needed. Medicare, NDIS & private patients welcome. Book a home visit today!"
+		/>
+		<meta
+			name="keywords"
+			content="Mobile podiatrist Adelaide, home visit podiatry, foot care, ingrown toenail, diabetic foot care"
+		/>
+		<meta name="author" content="Stride Podiatry" />
+
+		<!-- Set the Preferred Site Name -->
+		<meta name="site_name" content="Stride Podiatry" />
+
+		<!-- Open Graph for Social Media -->
+		<meta property="og:site_name" content="Stride Podiatry" />
+		<meta
+			property="og:title"
+			content="Stride Podiatry | Mobile Podiatrist Adelaide"
+		/>
+		<meta
+			property="og:description"
+			content="Professional mobile podiatry services in Adelaide. Home visits available. No referral needed!"
+		/>
+		<meta
+			property="og:image"
+			content="https://stride-podiatry.com.au/assets/images/Stride_logo.jpg"
+		/>
+		<meta property="og:url" content="https://stride-podiatry.com.au" />
+		<meta property="og:type" content="website" />
+
+		<!-- JSON-LD Schema for Local SEO -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "MedicalBusiness",
+				"name": "Stride Podiatry",
+				"image": "https://stride-podiatry.com.au/assets/images/Stride_logo.jpg",
+				"url": "https://stride-podiatry.com.au",
+				"telephone": "+61 468 518 993",
+				"description": "Stride Podiatry provides expert mobile podiatry services in Adelaide. Home visits available. No referral needed.",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Adelaide",
+					"addressRegion": "SA",
+					"addressCountry": "Australia"
+				},
+				"openingHours": "Mo,Tu,We,Th,Fr 08:00-17:00",
+				"areaServed": {
+					"@type": "AdministrativeArea",
+					"name": "Adelaide Metro"
+				}
+			}
 		</script>
+		<script type="module" crossorigin src="/assets/index-DDiC3Y89.js"></script>
+		<link rel="stylesheet" crossorigin href="/assets/index-KkCP3sj9.css">
 	</head>
-	<body>
-		<p>
-			Loading… If you are not redirected,
-			<a href="/?p=/faq">click here</a>.
-		</p>
+	<body class="h-full">
+		<div id="root"></div>
+		<script>
+			(function () {
+				var params = new URLSearchParams(window.location.search);
+				var p = params.get('p');
+				if (p) {
+					window.history.replaceState({}, '', p);
+				}
+			})();
+		</script>
+
+		<script src="/env.js"></script>
 	</body>
 </html>
