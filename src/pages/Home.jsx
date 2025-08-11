@@ -38,6 +38,7 @@ const Home = () => {
 					content="Expert mobile podiatry across Adelaide. Home visit foot care, ingrown toenails, heel pain, diabetic assessments, orthotics and more. No referral needed—book online."
 				/>
 				<meta name="robots" content="index, follow" />
+				<link rel="canonical" href="https://stride-podiatry.com.au/" />
 				<script type="application/ld+json">
 					{JSON.stringify(orgLD)}
 				</script>

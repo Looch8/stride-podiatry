@@ -14,6 +14,10 @@ const Referral = () => {
 					content="Referral information for GPs and coordinators. We accept GPMP/TCA (Medicare CDM), NDIS and aged care referrals for mobile podiatry across Adelaide."
 				/>
 				<meta name="robots" content="index, follow" />
+				<link
+					rel="canonical"
+					href="https://stride-podiatry.com.au/referral/"
+				/>
 			</Helmet>
 
 			<h1>Refer a Patient</h1>

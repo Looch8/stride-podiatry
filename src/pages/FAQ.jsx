@@ -60,6 +60,10 @@ const FAQ = () => {
 					content="Answers to common questions about mobile podiatry in Adelaide: Medicare CDM, NDIS, DVA, service areas, conditions treated, and what to expect at a home visit."
 				/>
 				<meta name="robots" content="index, follow" />
+				<link
+					rel="canonical"
+					href="https://stride-podiatry.com.au/faq/"
+				/>
 				<script type="application/ld+json">
 					{JSON.stringify(faqLD)}
 				</script>

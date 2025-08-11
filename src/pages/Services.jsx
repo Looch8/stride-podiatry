@@ -104,6 +104,10 @@ const Services = () => {
 					content="Mobile podiatry services in Adelaide: general foot & nail care, heel pain, ingrown toenails, diabetic assessments, biomechanics, orthotics, footwear advice and sports podiatry."
 				/>
 				<meta name="robots" content="index, follow" />
+				<link
+					rel="canonical"
+					href="https://stride-podiatry.com.au/services/"
+				/>
 			</Helmet>
 
 			<div className="services-container">

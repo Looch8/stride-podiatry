@@ -76,6 +76,10 @@ const Contact = () => {
 					content="Contact Stride Podiatry to arrange a mobile podiatry visit in Adelaide. Call 0468 518 993 or email luke@stride-podiatry.com.au."
 				/>
 				<meta name="robots" content="index, follow" />
+				<link
+					rel="canonical"
+					href="https://stride-podiatry.com.au/contact-us/"
+				/>
 				<script type="application/ld+json">
 					{JSON.stringify(contactLD)}
 				</script>

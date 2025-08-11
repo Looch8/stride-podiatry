@@ -73,6 +73,10 @@ const Booking = () => {
 					content="Request a mobile podiatry home visit in Adelaide. No referral needed. We accept Medicare CDM (GPMP/TCA), NDIS and private patients."
 				/>
 				<meta name="robots" content="index, follow" />
+				<link
+					rel="canonical"
+					href="https://stride-podiatry.com.au/booking/"
+				/>
 			</Helmet>
 
 			<h1>Request a Home Visit</h1>

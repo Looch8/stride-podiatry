@@ -15,6 +15,10 @@ const About = () => {
 					content="Stride Podiatry provides high-quality mobile podiatry in Adelaide. Meet Luke Wheldale and learn about our mission to deliver convenient, expert foot care at home."
 				/>
 				<meta name="robots" content="index, follow" />
+				<link
+					rel="canonical"
+					href="https://stride-podiatry.com.au/about-us/"
+				/>
 			</Helmet>
 
 			<div className="about-section">
