@@ -9,7 +9,7 @@
 		<link
 			rel="icon"
 			type="image/jpeg"
-			href="./src/assets/images/Stride_logo.jpg"
+			href="/assets/images/Stride_logo.jpg"
 		/>
 
 		<!-- Google Fonts -->
@@ -90,6 +90,16 @@
 	</head>
 	<body class="h-full">
 		<div id="root"></div>
+		<script>
+			(function () {
+				var params = new URLSearchParams(window.location.search);
+				var p = params.get('p');
+				if (p) {
+					window.history.replaceState({}, '', p);
+				}
+			})();
+		</script>
+
 		<script src="/env.js"></script>
 		<script type="module" src="/src/main.jsx"></script>
 	</body>
