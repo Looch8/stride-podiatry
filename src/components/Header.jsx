@@ -8,38 +8,41 @@ const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
 
 	useEffect(() => {
-		const handleScroll = () => {
-			const scrollPosition = window.scrollY;
-			setIsScrolled(scrollPosition > 50);
-		};
-
+		const handleScroll = () => setIsScrolled(window.scrollY > 50);
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
-	const toggleMobileMenu = () => {
-		setIsMobileMenuOpen(!isMobileMenuOpen);
-	};
-
-	const closeMobileMenu = () => {
-		setIsMobileMenuOpen(false);
-	};
+	const toggleMobileMenu = () => setIsMobileMenuOpen((v) => !v);
+	const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
 	return (
 		<header className={`header ${isScrolled ? 'scrolled' : ''}`}>
-			<nav className="navbar">
+			<nav className="navbar" role="navigation" aria-label="Primary">
 				<Link to="/" className="logo" onClick={closeMobileMenu}>
-					<img src={logo} alt="Stride Logo" className="logo-image" />
+					<img
+						src={logo}
+						alt="Stride Podiatry logo"
+						className="logo-image"
+					/>
 				</Link>
-				<div
+
+				<button
 					className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
 					onClick={toggleMobileMenu}
+					aria-controls="primary-navigation"
+					aria-expanded={isMobileMenuOpen}
+					aria-label="Toggle navigation menu"
 				>
 					<span className="bar"></span>
 					<span className="bar"></span>
 					<span className="bar"></span>
-				</div>
-				<ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
+				</button>
+
+				<ul
+					id="primary-navigation"
+					className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}
+				>
 					<li>
 						<Link to="/" onClick={closeMobileMenu}>
 							Home

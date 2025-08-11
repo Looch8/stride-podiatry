@@ -36,12 +36,10 @@ const Contact = () => {
 				templateParams,
 				window.env.VITE_EMAILJS_PUBLIC_KEY
 			);
-
 			setMessage({
 				type: 'success',
 				text: "Your message has been sent successfully! We'll get back to you soon.",
 			});
-
 			setFormData({ name: '', email: '', message: '' });
 		} catch (error) {
 			console.error('Error sending email:', error);
@@ -88,8 +86,7 @@ const Contact = () => {
 					<h2>Contact Stride Podiatry</h2>
 					<p>
 						Have a question? Need more information? We&apos;re here
-						to help! Get in touch with us through any of the
-						following channels.
+						to help!
 					</p>
 				</div>
 

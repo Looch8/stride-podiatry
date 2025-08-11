@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import '../styles/Services.css';
 
-// Import images for each service
+// Images
 import generalCareImg from '../assets/images/general-foot-care.jpg';
 import ingrownNailImg from '../assets/images/ingrown-nail.jpg';
 import diabetesCareImg from '../assets/images/diabetesCare2.png';
@@ -14,6 +14,7 @@ import sportsPodiatryImg from '../assets/images/sportsPodiatryImg.jpeg';
 
 const serviceData = [
 	{
+		id: 'general-care',
 		title: 'General Podiatry Care',
 		image: generalCareImg,
 		description:
@@ -22,6 +23,7 @@ const serviceData = [
 			'Common conditions treated: thickened nails, corns, calluses, and cracked heels. Treatment includes debridement, padding, and footwear advice.',
 	},
 	{
+		id: 'ingrown-toenails',
 		title: 'Ingrown Toenail Care',
 		image: ingrownNailImg,
 		description:
@@ -30,6 +32,7 @@ const serviceData = [
 			'Common treatments include conservative nail care, nail bracing, and minor surgical procedures under local anesthesia.',
 	},
 	{
+		id: 'diabetic-assessments',
 		title: 'Diabetes Care',
 		image: diabetesCareImg,
 		description:
@@ -38,6 +41,7 @@ const serviceData = [
 			'Includes neurological & vascular assessments, prevention of diabetic foot ulcers, and routine nail/skin care.',
 	},
 	{
+		id: 'biomechanics',
 		title: 'Biomechanics',
 		image: biomechanicsImg,
 		description:
@@ -46,22 +50,25 @@ const serviceData = [
 			'Treatment involves gait assessments, orthotics, and strengthening exercises to prevent pain and injury.',
 	},
 	{
+		id: 'orthotics',
 		title: 'Custom Orthotics',
 		image: orthoticsImg,
 		description:
 			'Personalised orthotic devices designed to support your feet, correct biomechanical issues, and relieve pain.',
 		details:
-			'Custom-made orthotics based on detailed biomechanical assessment, foot shape, and your specific needs. Suitable for various conditions including flat feet, high arches, and sports-related issues.',
+			'Custom-made orthotics based on detailed biomechanical assessment, foot shape, and your specific needs.',
 	},
 	{
+		id: 'heel-pain',
 		title: 'Foot Pain',
 		image: footPainImg,
 		description:
 			'Diagnosis and treatment of various causes of foot pain to help you get back on your feet pain-free.',
 		details:
-			'Conditions treated include plantar fasciitis, heel spurs, and Achilles tendinitis using pain management, orthotics, and rehabilitation plans.',
+			'Conditions treated include plantar fasciitis, heel spurs, and Achilles tendinitis using pain management, orthotics, and rehab plans.',
 	},
 	{
+		id: 'footwear',
 		title: 'Shoewear Advice',
 		image: shoewearImg,
 		description:
@@ -70,6 +77,7 @@ const serviceData = [
 			'Assessing foot shape, arch support, and gait pattern to recommend appropriate footwear for comfort and injury prevention.',
 	},
 	{
+		id: 'sports-podiatry',
 		title: 'Sports Podiatry',
 		image: sportsPodiatryImg,
 		description:
@@ -81,7 +89,6 @@ const serviceData = [
 
 const Services = () => {
 	const [selectedService, setSelectedService] = useState(null);
-
 	const openModal = (service) => setSelectedService(service);
 	const closeModal = () => setSelectedService(null);
 
@@ -109,22 +116,26 @@ const Services = () => {
 				</div>
 
 				<div className="services-grid">
-					{serviceData.map((service, index) => (
+					{serviceData.map((service) => (
 						<div
-							key={index}
+							key={service.id}
+							id={service.id}
 							className="service-card"
 							onClick={() => openModal(service)}
 						>
 							<h3>{service.title}</h3>
 							<p>{service.description}</p>
 							<div className="service-image">
-								<img src={service.image} alt={service.title} />
+								<img
+									src={service.image}
+									alt={service.title}
+									loading="lazy"
+								/>
 							</div>
 						</div>
 					))}
 				</div>
 
-				{/* Modal */}
 				{selectedService && (
 					<div className="modal-overlay" onClick={closeModal}>
 						<div
@@ -141,6 +152,7 @@ const Services = () => {
 								<img
 									src={selectedService.image}
 									alt={selectedService.title}
+									loading="lazy"
 								/>
 							</div>
 							<div className="modal-body">

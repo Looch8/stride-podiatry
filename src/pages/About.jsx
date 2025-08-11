@@ -44,6 +44,9 @@ const About = () => {
 					src={profilePhoto}
 					alt="Stride Podiatry - Professional Service"
 					className="profile-photo"
+					loading="lazy"
+					width="420"
+					height="420"
 				/>
 			</div>
 
@@ -52,6 +55,9 @@ const About = () => {
 					src={casualPhoto}
 					alt="Luke Wheldale - Personal"
 					className="profile-photo"
+					loading="lazy"
+					width="420"
+					height="420"
 				/>
 				<div className="about-text">
 					<h1>About Me</h1>

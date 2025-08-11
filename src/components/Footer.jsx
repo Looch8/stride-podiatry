@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -15,7 +14,6 @@ const Footer = () => {
 					<a
 						href="mailto:luke@stride-podiatry.com.au"
 						className="contact-link"
-						d
 					>
 						<i className="fas fa-envelope"></i>
 						<span>luke@stride-podiatry.com.au</span>
@@ -42,7 +40,7 @@ const Footer = () => {
 				</div>
 
 				<p className="copyright">
-					&copy; {currentYear} Stride Podiatry. All Rights Reserved.
+					© {currentYear} Stride Podiatry. All Rights Reserved.
 				</p>
 			</div>
 		</footer>

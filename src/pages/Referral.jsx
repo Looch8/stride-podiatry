@@ -18,8 +18,8 @@ const Referral = () => {
 
 			<h1>Refer a Patient</h1>
 			<p>
-				If you're a care coordinator, GP, or support provider, you can
-				refer a patient to Stride Podiatry using the form below.
+				If you're a care coordinator, GP, or support provider, refer a
+				patient to Stride Podiatry using the form below.
 			</p>
 			<p>
 				📄 <strong>Download:</strong>{' '}
@@ -27,7 +27,6 @@ const Referral = () => {
 					Stride Podiatry Referral Form (PDF)
 				</a>
 			</p>
-
 			<p>
 				📬 Once completed, please email it to:{' '}
 				<a href="mailto:luke@stride-podiatry.com.au">
@@ -35,8 +34,7 @@ const Referral = () => {
 				</a>
 			</p>
 			<p>
-				📞 For any queries, feel free to call{' '}
-				<strong>0468 518 993</strong>
+				📞 For queries, call <strong>0468 518 993</strong>
 			</p>
 		</div>
 	);

@@ -4,6 +4,29 @@ import { Helmet } from 'react-helmet-async';
 import profilePic from '../assets/images/profile-pic.webp';
 
 const Home = () => {
+	const orgLD = {
+		'@context': 'https://schema.org',
+		'@type': 'MedicalBusiness',
+		name: 'Stride Podiatry',
+		url: 'https://stride-podiatry.com.au',
+		telephone: '+61468518993',
+		email: 'luke@stride-podiatry.com.au',
+		image: 'https://stride-podiatry.com.au/assets/images/Stride_logo.jpg',
+		areaServed: [
+			'Adelaide Metro',
+			'Northern Adelaide',
+			'Southern Adelaide',
+			'Eastern Adelaide',
+			'Western Adelaide',
+			'Adelaide CBD',
+		],
+		priceRange: '$$',
+		sameAs: [
+			'https://www.facebook.com/profile.php?id=61570588927493',
+			'https://www.instagram.com/stride.podiatry/',
+		],
+	};
+
 	return (
 		<main className="main-content">
 			<Helmet>
@@ -15,6 +38,9 @@ const Home = () => {
 					content="Expert mobile podiatry across Adelaide. Home visit foot care, ingrown toenails, heel pain, diabetic assessments, orthotics and more. No referral needed—book online."
 				/>
 				<meta name="robots" content="index, follow" />
+				<script type="application/ld+json">
+					{JSON.stringify(orgLD)}
+				</script>
 			</Helmet>
 
 			{/* Hero Section with Background Image */}
@@ -24,7 +50,11 @@ const Home = () => {
 					<h2 className="subtitle">
 						Mobile Podiatrist Adelaide – We Come to You!
 					</h2>
-					<Link to="/booking" className="hero-cta-button">
+					<Link
+						to="/booking"
+						className="hero-cta-button"
+						aria-label="Book a home visit with Stride Podiatry"
+					>
 						Book Your Home Visit
 					</Link>
 				</div>
@@ -35,7 +65,10 @@ const Home = () => {
 				<div className="profile-image">
 					<img
 						src={profilePic}
-						alt="Luke Wheldale - Stride Podiatry"
+						alt="Luke Wheldale — Mobile Podiatrist in Adelaide"
+						loading="lazy"
+						width="350"
+						height="420"
 					/>
 				</div>
 
@@ -52,9 +85,23 @@ const Home = () => {
 						<p>
 							We are a <strong>mobile podiatry service</strong>,
 							meaning we treat you in the comfort of your home,
-							workplace, or aged care facility. Our goal is to
-							provide high-quality, convenient care wherever you
-							need it.
+							workplace, or aged care facility. We offer{' '}
+							<Link to="/services#ingrown-toenails">
+								ingrown toenail care
+							</Link>
+							,{' '}
+							<Link to="/services#heel-pain">
+								heel pain treatment
+							</Link>
+							,{' '}
+							<Link to="/services#diabetic-assessments">
+								diabetic foot assessments
+							</Link>
+							,{' '}
+							<Link to="/services#orthotics">
+								custom orthotics
+							</Link>
+							, and more.
 						</p>
 					</div>
 

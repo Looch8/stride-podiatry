@@ -40,12 +40,10 @@ const Booking = () => {
 				templateParams,
 				window.env.VITE_EMAILJS_PUBLIC_KEY
 			);
-
 			setMessage({
 				type: 'success',
 				text: "Your booking request has been sent successfully! We'll contact you shortly to schedule your appointment.",
 			});
-
 			setFormData({
 				fullName: '',
 				phone: '',

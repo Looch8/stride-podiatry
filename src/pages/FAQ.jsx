@@ -7,7 +7,7 @@ const FAQ = () => {
 	const toggleFAQ = (index) =>
 		setOpenIndex(openIndex === index ? null : index);
 
-	// Stable across renders
+	// Stable data to satisfy eslint-plugin-react-hooks
 	const faqData = useMemo(
 		() => [
 			{
@@ -24,21 +24,20 @@ const FAQ = () => {
 			},
 			{
 				question: 'What conditions do you treat?',
-				answer: 'We specialize in treating foot pain, general footcare, ingrown toenails, diabetic foot care, corns, calluses, plantar fasciitis, and footwear assessments.',
+				answer: 'We specialise in foot pain, general footcare, ingrown toenails, diabetic foot care, corns, calluses, plantar fasciitis, and footwear assessments.',
 			},
 			{
 				question: 'How do I book an appointment?',
-				answer: 'You can book an appointment by calling us, emailing, or using our online booking or contact form.',
+				answer: 'Call us, email us, or use our online booking/contact form.',
 			},
 			{
 				question: 'What should I expect during a home visit?',
-				answer: 'During a home visit, our podiatrist will assess your feet, provide treatment as needed, and offer footwear or mobility advice to keep your feet healthy.',
+				answer: 'We assess your feet, provide treatment as needed, and offer footwear or mobility advice to keep your feet healthy.',
 			},
 		],
-		[] // <-- empty deps: created once
+		[]
 	);
 
-	// Build JSON-LD from the stable faqData
 	const faqLD = useMemo(
 		() => ({
 			'@context': 'https://schema.org',
