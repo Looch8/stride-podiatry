@@ -1,26 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<title>Redirecting...</title>
+		<meta charset="utf-8" />
+		<title>Redirecting…</title>
+		<meta name="robots" content="noindex" />
 		<script>
-			// Get the path from the URL
-			const path = window.location.pathname;
-
-			// If we're on the home page, don't redirect
-			if (path === '/') {
-				window.location.replace('/');
-			} else {
-				// For other paths, redirect to the hash-based route
-				window.location.replace('/#' + path);
-			}
+			(function () {
+				var redirectUrl =
+					location.pathname + location.search + location.hash;
+				// send users to index with the original path in ?p=
+				location.replace('/?p=' + encodeURIComponent(redirectUrl));
+			})();
 		</script>
 	</head>
 	<body>
-		<h1>Redirecting...</h1>
-		<p>
-			If you are not redirected automatically, please
-			<a href="/">click here</a>.
-		</p>
+		<h1>Redirecting…</h1>
 	</body>
 </html>

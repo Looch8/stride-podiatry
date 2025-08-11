@@ -9,7 +9,7 @@
 		<link
 			rel="icon"
 			type="image/jpeg"
-			href="/assets/Stride_logo-OTsbhItX.jpg"
+			href="/assets/images/Stride_logo.jpg"
 		/>
 
 		<!-- Google Fonts -->
@@ -87,11 +87,21 @@
 				}
 			}
 		</script>
-		<script type="module" crossorigin src="/assets/index-CLwzIim8.js"></script>
+		<script type="module" crossorigin src="/assets/index-L53ZDUis.js"></script>
 		<link rel="stylesheet" crossorigin href="/assets/index-CgSHFT9M.css">
 	</head>
 	<body class="h-full">
 		<div id="root"></div>
+		<script>
+			(function () {
+				var params = new URLSearchParams(window.location.search);
+				var p = params.get('p');
+				if (p) {
+					window.history.replaceState({}, '', p);
+				}
+			})();
+		</script>
+
 		<script src="/env.js"></script>
 	</body>
 </html>
