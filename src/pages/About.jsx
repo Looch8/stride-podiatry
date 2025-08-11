@@ -1,10 +1,22 @@
 import '../styles/About.css';
+import { Helmet } from 'react-helmet-async';
 import profilePhoto from '../assets/images/profile-pic.webp';
 import casualPhoto from '../assets/images/me-casual.jpg';
 
 const About = () => {
 	return (
 		<div className="about-container">
+			<Helmet>
+				<title>
+					About Stride Podiatry | Mobile Podiatrist in Adelaide
+				</title>
+				<meta
+					name="description"
+					content="Stride Podiatry provides high-quality mobile podiatry in Adelaide. Meet Luke Wheldale and learn about our mission to deliver convenient, expert foot care at home."
+				/>
+				<meta name="robots" content="index, follow" />
+			</Helmet>
+
 			<div className="about-section">
 				<div className="about-text">
 					<h1>About Stride Podiatry</h1>

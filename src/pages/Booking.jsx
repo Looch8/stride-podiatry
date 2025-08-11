@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import emailjs from '@emailjs/browser';
 import '../styles/Booking.css';
 
@@ -16,7 +17,7 @@ const Booking = () => {
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setFormData({ ...formData, [name]: value });
-		setMessage({ type: '', text: '' }); // Clear any existing messages
+		setMessage({ type: '', text: '' });
 	};
 
 	const handleSubmit = async (e) => {
@@ -65,10 +66,22 @@ const Booking = () => {
 
 	return (
 		<div className="booking-container">
+			<Helmet>
+				<title>
+					Book a Mobile Podiatrist | Stride Podiatry Adelaide
+				</title>
+				<meta
+					name="description"
+					content="Request a mobile podiatry home visit in Adelaide. No referral needed. We accept Medicare CDM (GPMP/TCA), NDIS and private patients."
+				/>
+				<meta name="robots" content="index, follow" />
+			</Helmet>
+
 			<h1>Request a Home Visit</h1>
 			<p>
 				We&apos;ll contact you to schedule an appointment at your home.
 			</p>
+
 			<form className="booking-form" onSubmit={handleSubmit}>
 				<div className="form-group">
 					<label htmlFor="fullName">Full Name</label>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
 
@@ -14,7 +15,7 @@ const Contact = () => {
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setFormData({ ...formData, [name]: value });
-		setMessage({ type: '', text: '' }); // Clear any existing messages
+		setMessage({ type: '', text: '' });
 	};
 
 	const handleSubmit = async (e) => {
@@ -53,8 +54,35 @@ const Contact = () => {
 		}
 	};
 
+	const contactLD = {
+		'@context': 'https://schema.org',
+		'@type': 'ContactPage',
+		url: 'https://stride-podiatry.com.au/contact-us',
+		mainEntity: {
+			'@type': 'MedicalBusiness',
+			name: 'Stride Podiatry',
+			telephone: '+61468518993',
+			email: 'luke@stride-podiatry.com.au',
+			areaServed: 'Adelaide',
+		},
+	};
+
 	return (
 		<section className="contact">
+			<Helmet>
+				<title>
+					Contact Stride Podiatry | Mobile Podiatrist Adelaide
+				</title>
+				<meta
+					name="description"
+					content="Contact Stride Podiatry to arrange a mobile podiatry visit in Adelaide. Call 0468 518 993 or email luke@stride-podiatry.com.au."
+				/>
+				<meta name="robots" content="index, follow" />
+				<script type="application/ld+json">
+					{JSON.stringify(contactLD)}
+				</script>
+			</Helmet>
+
 			<div className="contact-container">
 				<div className="contact-header">
 					<h2>Contact Stride Podiatry</h2>

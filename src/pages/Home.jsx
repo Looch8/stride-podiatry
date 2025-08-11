@@ -1,10 +1,22 @@
 import '../styles/Home.css';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import profilePic from '../assets/images/profile-pic.webp';
 
 const Home = () => {
 	return (
 		<main className="main-content">
+			<Helmet>
+				<title>
+					Stride Podiatry | Mobile Podiatrist Adelaide — Home Visits
+				</title>
+				<meta
+					name="description"
+					content="Expert mobile podiatry across Adelaide. Home visit foot care, ingrown toenails, heel pain, diabetic assessments, orthotics and more. No referral needed—book online."
+				/>
+				<meta name="robots" content="index, follow" />
+			</Helmet>
+
 			{/* Hero Section with Background Image */}
 			<section className="hero-section">
 				<div className="hero-content">
@@ -77,8 +89,7 @@ const Home = () => {
 						</ul>
 						<p className="contact-note">
 							If you're outside these areas, feel free to contact
-							us—
-							<em>we may still be able to help.</em>
+							us—<em>we may still be able to help.</em>
 						</p>
 					</div>
 

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import '../styles/Services.css';
 
 // Import images for each service
@@ -81,16 +82,23 @@ const serviceData = [
 const Services = () => {
 	const [selectedService, setSelectedService] = useState(null);
 
-	const openModal = (service) => {
-		setSelectedService(service);
-	};
-
-	const closeModal = () => {
-		setSelectedService(null);
-	};
+	const openModal = (service) => setSelectedService(service);
+	const closeModal = () => setSelectedService(null);
 
 	return (
 		<section className="services">
+			<Helmet>
+				<title>
+					Podiatry Services | Mobile Podiatrist Adelaide | Stride
+					Podiatry
+				</title>
+				<meta
+					name="description"
+					content="Mobile podiatry services in Adelaide: general foot & nail care, heel pain, ingrown toenails, diabetic assessments, biomechanics, orthotics, footwear advice and sports podiatry."
+				/>
+				<meta name="robots" content="index, follow" />
+			</Helmet>
+
 			<div className="services-container">
 				<div className="services-header">
 					<h2>Our Services</h2>
