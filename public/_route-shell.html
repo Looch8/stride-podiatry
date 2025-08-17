@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<base href="/" />
+
+		<link
+			rel="icon"
+			type="image/jpeg"
+			href="/assets/images/Stride_logo.jpg"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Indexable in production -->
+		<meta name="robots" content="index, follow" />
+
+		<!-- Per-route canonical & og:url are injected by the copy script -->
+		<link rel="canonical" href="https://stride-podiatry.com.au__PATH__/" />
+		<meta
+			property="og:url"
+			content="https://stride-podiatry.com.au__PATH__/"
+		/>
+
+		<!-- Safe defaults; React Helmet will enhance per actual route -->
+		<title>Stride Podiatry | Mobile Podiatrist Adelaide</title>
+		<meta
+			name="description"
+			content="Mobile podiatry in Adelaide. Home visits. Medicare, NDIS & private patients welcome."
+		/>
+		<meta property="og:site_name" content="Stride Podiatry" />
+		<meta
+			property="og:title"
+			content="Stride Podiatry | Mobile Podiatrist Adelaide"
+		/>
+		<meta
+			property="og:description"
+			content="Mobile podiatry in Adelaide. Home visits. Medicare, NDIS & private patients welcome."
+		/>
+		<meta
+			property="og:image"
+			content="https://stride-podiatry.com.au/assets/images/Stride_logo.jpg"
+		/>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<!-- Optional: support /?p=/route hydration without redirect -->
+		<script>
+			(function () {
+				var params = new URLSearchParams(location.search);
+				var p = params.get('p');
+				if (p) history.replaceState({}, '', p);
+			})();
+		</script>
+
+		<script src="/env.js"></script>
+		<script type="module" src="/src/main.jsx"></script>
+	</body>
+</html>
