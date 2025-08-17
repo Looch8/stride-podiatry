@@ -16,6 +16,15 @@ const Header = () => {
 	const toggleMobileMenu = () => setIsMobileMenuOpen((v) => !v);
 	const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
+	// Close menu on ESC (nice for accessibility)
+	useEffect(() => {
+		const onKey = (e) => {
+			if (e.key === 'Escape') setIsMobileMenuOpen(false);
+		};
+		window.addEventListener('keydown', onKey);
+		return () => window.removeEventListener('keydown', onKey);
+	}, []);
+
 	return (
 		<header className={`header ${isScrolled ? 'scrolled' : ''}`}>
 			<nav className="navbar" role="navigation" aria-label="Primary">
@@ -30,7 +39,7 @@ const Header = () => {
 					/>
 				</Link>
 
-				{/* Hamburger (always sits on the far right on mobile) */}
+				{/* Hamburger (forced to far right) */}
 				<button
 					className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}
 					onClick={toggleMobileMenu}
@@ -48,8 +57,9 @@ const Header = () => {
 					id="primary-navigation"
 					className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}
 					onClick={(e) => {
-						// close menu when any link inside is clicked
-						if (e.target.tagName === 'A') closeMobileMenu();
+						// only close when clicking actual links
+						const anchor = e.target.closest('a');
+						if (anchor) closeMobileMenu();
 					}}
 				>
 					<li>
