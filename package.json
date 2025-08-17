@@ -7,9 +7,9 @@
 	"scripts": {
 		"dev": "vite",
 		"lint": "eslint .",
-		"preview": "vite preview",
 		"build": "vite build",
 		"postbuild": "node scripts/copy-shells.cjs",
+		"preview": "vite preview",
 		"deploy": "npm run build && gh-pages -d dist"
 	},
 	"dependencies": {
