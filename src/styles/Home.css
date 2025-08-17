@@ -1,7 +1,7 @@
 /* Home.css */
 .main-content {
 	padding: 0;
-	background-color: #f8f9fa;
+	background: #f5f9fc;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -9,41 +9,39 @@
 	overflow-x: hidden;
 }
 
-/* Hero Section */
+/* Hero */
 .hero-section {
 	width: 100%;
-	background: linear-gradient(rgba(0, 64, 128, 0.8), rgba(0, 64, 128, 0.8)),
+	background: linear-gradient(
+			rgba(68, 94, 108, 0.86),
+			rgba(68, 94, 108, 0.86)
+		),
 		url('../assets/images/hero-bg.jpg') center/cover;
 	min-height: 60vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	color: white;
+	color: #ffffff;
 	padding: 4rem 2rem;
 	box-sizing: border-box;
 	position: relative;
 	z-index: 1;
 }
-
 .hero-content {
 	max-width: 800px;
 	width: 100%;
 	padding: 0 1rem;
 	box-sizing: border-box;
 }
-
 .title {
 	font-size: 4rem;
 	font-weight: 700;
-	color: white;
 	margin-bottom: 1rem;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 .subtitle {
 	font-size: 2rem;
-	color: white;
 	font-weight: 500;
 	margin-bottom: 2rem;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -53,21 +51,20 @@
 	display: inline-block;
 	padding: 1rem 2rem;
 	font-size: 1.2rem;
-	color: white;
-	background-color: #0077cc;
+	color: #ffffff;
+	background: #6d899d;
 	border-radius: 8px;
 	text-decoration: none;
-	transition: all 0.3s ease;
+	transition: all 0.2s;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .hero-cta-button:hover {
-	background-color: #005fa3;
+	background: #567283;
 	transform: translateY(-2px);
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Home Container */
+/* Main section */
 .home-container {
 	display: flex;
 	align-items: flex-start;
@@ -82,26 +79,22 @@
 	box-sizing: border-box;
 }
 
-/* Profile Image */
 .profile-image {
 	flex-shrink: 0;
 	position: relative;
 	z-index: 1;
 }
-
 .profile-image img {
 	width: 350px;
 	height: auto;
 	border-radius: 16px;
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease;
+	transition: transform 0.3s;
 }
-
 .profile-image img:hover {
 	transform: scale(1.02);
 }
 
-/* Home Text Content */
 .home-text {
 	flex: 1;
 	text-align: left;
@@ -112,14 +105,13 @@
 .service-highlight,
 .location-card,
 .contact-card {
-	background: white;
+	background: #ffffff;
 	border-radius: 16px;
 	padding: 2rem;
 	margin-bottom: 2rem;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .welcome-card:hover,
 .service-highlight:hover,
 .location-card:hover,
@@ -130,20 +122,19 @@
 
 .home-text h3 {
 	font-size: 2rem;
-	color: #004080;
+	color: #445e6c;
 	margin-bottom: 1rem;
 }
-
 .home-text h4 {
 	font-size: 1.5rem;
-	color: #004080;
+	color: #445e6c;
 	margin-bottom: 1rem;
 }
 
 .highlight-text {
 	font-size: 1.3rem;
-	color: #0077cc;
-	font-weight: 500;
+	color: #6d899d;
+	font-weight: 600;
 }
 
 .location-list,
@@ -152,18 +143,16 @@
 	padding: 0;
 	margin: 1rem 0;
 }
-
 .location-list li,
 .insurance-list li {
 	margin-bottom: 0.8rem;
 	padding-left: 1.5rem;
 	position: relative;
 }
-
 .location-list li:before,
 .insurance-list li:before {
 	content: '•';
-	color: #0077cc;
+	color: #6d899d;
 	font-weight: bold;
 	position: absolute;
 	left: 0;
@@ -174,35 +163,31 @@
 	flex-direction: column;
 	gap: 1rem;
 }
-
 .contact-info a {
-	color: #0077cc;
+	color: #6d899d;
 	text-decoration: none;
-	transition: color 0.3s ease;
+	transition: color 0.2s;
 }
-
 .contact-info a:hover {
-	color: #005fa3;
+	color: #567283;
 }
 
-/* Services Preview Section */
+/* Services preview */
 .services-preview {
 	width: 100%;
-	background-color: #f0f8ff;
+	background: #eaf3f8;
 	padding: 4rem 2rem;
 	margin: 2rem 0;
 	box-sizing: border-box;
 }
-
 .section-content {
 	max-width: 800px;
 	margin: 0 auto;
 	text-align: center;
 }
-
 .services-preview h3 {
 	font-size: 2rem;
-	color: #004080;
+	color: #445e6c;
 	margin-bottom: 1.5rem;
 }
 
@@ -210,151 +195,126 @@
 	display: inline-block;
 	padding: 1rem 2rem;
 	font-size: 1.1rem;
-	color: white;
-	background-color: #0077cc;
+	color: #ffffff;
+	background: #6d899d;
 	border-radius: 8px;
 	text-decoration: none;
-	transition: all 0.3s ease;
+	transition: all 0.2s;
 	margin-top: 2rem;
 }
-
 .view-all-services:hover {
-	background-color: #005fa3;
+	background: #567283;
 	transform: translateY(-2px);
 }
 
-/* Coverage Section */
+/* Coverage */
 .coverage-section {
 	width: 100%;
-	background-color: white;
+	background: #ffffff;
 	padding: 4rem 2rem;
 	margin: 2rem 0;
 	box-sizing: border-box;
 }
-
 .insurance-note {
 	font-style: italic;
 	color: #666;
 	margin-top: 1.5rem;
 }
 
-/* FAQ Preview Section */
+/* FAQ preview */
 .faq-preview {
 	width: 100%;
-	background-color: #f0f8ff;
+	background: #eaf3f8;
 	padding: 4rem 2rem;
 	margin: 2rem 0;
 	box-sizing: border-box;
 }
-
 .faq-preview a {
-	color: #0077cc;
+	color: #6d899d;
 	text-decoration: none;
-	font-weight: 500;
-	transition: color 0.3s ease;
+	font-weight: 600;
+	transition: color 0.2s;
 }
-
 .faq-preview a:hover {
-	color: #005fa3;
+	color: #567283;
 }
 
-/* CTA Section */
+/* CTA */
 .cta-section {
 	width: 100%;
 	padding: 4rem 2rem;
-	background-color: #004080;
-	color: white;
+	background: #445e6c;
+	color: #ffffff;
 	text-align: center;
 	box-sizing: border-box;
 }
-
 .book-now {
 	max-width: 600px;
 	margin: 0 auto;
 }
-
 .book-now h2 {
 	font-size: 2.5rem;
 	margin-bottom: 1.5rem;
 }
-
 .book-now p {
 	font-size: 1.2rem;
 	margin-bottom: 2rem;
 	line-height: 1.6;
 }
-
 .book-now-button {
 	display: inline-block;
 	padding: 1rem 2.5rem;
 	font-size: 1.2rem;
-	color: white;
-	background-color: #0077cc;
+	color: #ffffff;
+	background: #6d899d;
 	border-radius: 8px;
 	text-decoration: none;
-	transition: all 0.3s ease;
+	transition: all 0.2s;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .book-now-button:hover {
-	background-color: #005fa3;
+	background: #567283;
 	transform: translateY(-2px);
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 900px) {
 	.hero-section {
 		padding: 3rem 1.5rem;
 		min-height: 50vh;
 	}
-
 	.title {
 		font-size: 2.5rem;
 	}
-
 	.subtitle {
 		font-size: 1.4rem;
 	}
-
 	.home-container {
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
 		margin-top: -2rem;
 		padding: 0 1.5rem;
-		position: relative;
-		z-index: 1;
 	}
-
-	.profile-image {
-		position: relative;
-		z-index: 1;
-	}
-
 	.profile-image img {
 		width: 280px;
 	}
-
 	.home-text {
 		text-align: center;
 	}
-
 	.home-text h3 {
 		font-size: 1.8rem;
 	}
-
 	.home-text h4 {
 		font-size: 1.3rem;
 	}
-
 	.welcome-card,
 	.service-highlight,
 	.location-card,
 	.contact-card {
 		padding: 1.5rem;
 	}
-
 	.services-preview,
 	.coverage-section,
 	.faq-preview,
@@ -369,39 +329,31 @@
 		padding: 2rem 1rem;
 		min-height: 40vh;
 	}
-
 	.title {
 		font-size: 2rem;
 	}
-
 	.subtitle {
 		font-size: 1.2rem;
 	}
-
 	.home-container {
 		margin-top: -1rem;
 		padding: 0 1rem;
 	}
-
 	.profile-image img {
 		width: 250px;
 	}
-
 	.home-text h3 {
 		font-size: 1.6rem;
 	}
-
 	.home-text h4 {
 		font-size: 1.2rem;
 	}
-
 	.welcome-card,
 	.service-highlight,
 	.location-card,
 	.contact-card {
 		padding: 1.2rem;
 	}
-
 	.services-preview,
 	.coverage-section,
 	.faq-preview,
@@ -409,11 +361,9 @@
 		padding: 2rem 1rem;
 		margin: 0.5rem 0;
 	}
-
 	.book-now h2 {
 		font-size: 2rem;
 	}
-
 	.book-now p {
 		font-size: 1.1rem;
 	}
@@ -423,45 +373,36 @@
 	.hero-section {
 		min-height: 35vh;
 	}
-
 	.title {
 		font-size: 1.8rem;
 	}
-
 	.subtitle {
 		font-size: 1.1rem;
 	}
-
 	.profile-image img {
 		width: 200px;
 	}
-
 	.home-text h3 {
 		font-size: 1.4rem;
 	}
-
 	.home-text h4 {
 		font-size: 1.1rem;
 	}
-
 	.welcome-card,
 	.service-highlight,
 	.location-card,
 	.contact-card {
 		padding: 1rem;
 	}
-
 	.services-preview,
 	.coverage-section,
 	.faq-preview,
 	.cta-section {
 		padding: 1.5rem 1rem;
 	}
-
 	.book-now h2 {
 		font-size: 1.8rem;
 	}
-
 	.book-now p {
 		font-size: 1rem;
 	}

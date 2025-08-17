@@ -1,11 +1,10 @@
 /* Footer.css */
 .footer {
-	background-color: #f8f9fa;
-	color: #004080;
+	background: #f5f9fc;
+	color: #445e6c;
 	padding: 2rem 1rem;
 	margin-top: 4rem;
 }
-
 .footer-content {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -14,26 +13,22 @@
 	align-items: center;
 	gap: 1.5rem;
 }
-
 .footer-contact {
 	display: flex;
 	gap: 2rem;
 	align-items: center;
 }
-
 .contact-link {
-	color: #004080;
+	color: #445e6c;
 	text-decoration: none;
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
-	transition: opacity 0.3s ease;
+	transition: opacity 0.2s;
 }
-
 .contact-link:hover {
 	opacity: 0.8;
 }
-
 .contact-link i {
 	font-size: 1.2rem;
 }
@@ -42,13 +37,11 @@
 	display: flex;
 	gap: 1.5rem;
 }
-
 .social-links a {
-	color: #004080;
+	color: #445e6c;
 	font-size: 1.5rem;
-	transition: opacity 0.3s ease;
+	transition: opacity 0.2s;
 }
-
 .social-links a:hover {
 	opacity: 0.8;
 }
@@ -57,10 +50,10 @@
 	font-size: 0.9rem;
 	opacity: 0.8;
 	margin: 0;
-	color: #004080;
+	color: #445e6c;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
 	.footer-contact {
 		flex-direction: column;
