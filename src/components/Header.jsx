@@ -1,29 +1,58 @@
-import { useState, useEffect } from 'react';
-import logo from '../assets/images/white_logo.jpg';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import logo from '../assets/images/logo.png';
 import '../styles/Header.css';
 
 const Header = () => {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 
+	// Elevate header on scroll
 	useEffect(() => {
-		const handleScroll = () => setIsScrolled(window.scrollY > 50);
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
+		const onScroll = () => setIsScrolled(window.scrollY > 8);
+		onScroll();
+		window.addEventListener('scroll', onScroll, { passive: true });
+		return () => window.removeEventListener('scroll', onScroll);
 	}, []);
+
+	// Lock body scroll when mobile menu is open + close on Escape
+	useEffect(() => {
+		document.documentElement.style.overflow = isMobileMenuOpen
+			? 'hidden'
+			: '';
+		const onKey = (e) => e.key === 'Escape' && setIsMobileMenuOpen(false);
+		window.addEventListener('keydown', onKey);
+		return () => window.removeEventListener('keydown', onKey);
+	}, [isMobileMenuOpen]);
 
 	const toggleMobileMenu = () => setIsMobileMenuOpen((v) => !v);
 	const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
 	return (
 		<header className={`header ${isScrolled ? 'scrolled' : ''}`}>
+			{/* Backdrop for mobile menu */}
+			<div
+				className={`nav-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+				onClick={closeMobileMenu}
+				aria-hidden="true"
+			/>
+
 			<nav className="navbar" role="navigation" aria-label="Primary">
-				<Link to="/" className="logo" onClick={closeMobileMenu}>
+				<Link
+					to="/"
+					className="logo"
+					onClick={closeMobileMenu}
+					aria-label="Stride Podiatry — Home"
+				>
+					{/* Keep width/height for CLS; CSS will still control visual height */}
 					<img
 						src={logo}
-						alt="Stride Podiatry logo"
+						alt="Stride Podiatry"
 						className="logo-image"
+						width="320"
+						height="80"
+						fetchPriority="high"
+						decoding="async"
 					/>
 				</Link>
 
@@ -32,11 +61,16 @@ const Header = () => {
 					onClick={toggleMobileMenu}
 					aria-controls="primary-navigation"
 					aria-expanded={isMobileMenuOpen}
-					aria-label="Toggle navigation menu"
+					aria-label={
+						isMobileMenuOpen
+							? 'Close navigation menu'
+							: 'Open navigation menu'
+					}
+					type="button"
 				>
-					<span className="bar"></span>
-					<span className="bar"></span>
-					<span className="bar"></span>
+					<span className="bar" />
+					<span className="bar" />
+					<span className="bar" />
 				</button>
 
 				<ul
@@ -44,41 +78,93 @@ const Header = () => {
 					className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}
 				>
 					<li>
-						<Link to="/" onClick={closeMobileMenu}>
+						<NavLink
+							to="/"
+							end
+							onClick={closeMobileMenu}
+							className={({ isActive }) =>
+								isActive ? 'active' : undefined
+							}
+						>
 							Home
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/services" onClick={closeMobileMenu}>
+						<NavLink
+							to="/services/"
+							onClick={closeMobileMenu}
+							className={({ isActive }) =>
+								isActive ? 'active' : undefined
+							}
+						>
 							Services
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/about-us" onClick={closeMobileMenu}>
+						<NavLink
+							to="/about-us/"
+							onClick={closeMobileMenu}
+							className={({ isActive }) =>
+								isActive ? 'active' : undefined
+							}
+						>
 							About
-						</Link>
+						</NavLink>
 					</li>
-					<li>
-						<Link to="/booking" onClick={closeMobileMenu}>
+					<li className="nav-cta--mobile">
+						<NavLink
+							to="/booking/"
+							onClick={closeMobileMenu}
+							className={({ isActive }) =>
+								isActive ? 'active' : undefined
+							}
+						>
 							Booking
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/contact-us" onClick={closeMobileMenu}>
+						<NavLink
+							to="/contact-us/"
+							onClick={closeMobileMenu}
+							className={({ isActive }) =>
+								isActive ? 'active' : undefined
+							}
+						>
 							Contact Us
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/referral" onClick={closeMobileMenu}>
+						<NavLink
+							to="/referral/"
+							onClick={closeMobileMenu}
+							className={({ isActive }) =>
+								isActive ? 'active' : undefined
+							}
+						>
 							Referrals
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/faq" onClick={closeMobileMenu}>
+						<NavLink
+							to="/faq/"
+							onClick={closeMobileMenu}
+							className={({ isActive }) =>
+								isActive ? 'active' : undefined
+							}
+						>
 							FAQ
-						</Link>
+						</NavLink>
 					</li>
 				</ul>
+
+				{/* Desktop CTA */}
+				<Link
+					to="/booking/"
+					className="nav-cta"
+					onClick={closeMobileMenu}
+				>
+					Book Now
+				</Link>
 			</nav>
 		</header>
 	);
