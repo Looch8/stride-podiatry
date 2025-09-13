@@ -135,16 +135,21 @@
 	line-height: 1.6;
 }
 .close-btn {
-	position: absolute;
+	position: fixed;
 	top: 1rem;
 	right: 1rem;
-	font-size: 2rem;
-	color: #666;
+	font-size: 2.5rem;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 50%;
+	padding: 0.3rem 0.7rem;
 	cursor: pointer;
-	transition: color 0.2s;
+	z-index: 1100;
+	transition: background 0.2s;
 }
 .close-btn:hover {
-	color: #6d899d;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
 }
 
 @keyframes fadeIn {
@@ -196,6 +201,6 @@
 		font-size: 1.8rem;
 	}
 	.modal-image {
-		height: 250px;
+		height: 220px;
 	}
 }

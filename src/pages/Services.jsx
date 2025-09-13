@@ -1,4 +1,5 @@
-import { useState } from 'react';
+// Services.jsx
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import '../styles/Services.css';
 
@@ -89,6 +90,19 @@ const serviceData = [
 
 const Services = () => {
 	const [selectedService, setSelectedService] = useState(null);
+
+	// Disable body scroll when modal is open
+	useEffect(() => {
+		if (selectedService) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = 'auto';
+		}
+		return () => {
+			document.body.style.overflow = 'auto';
+		};
+	}, [selectedService]);
+
 	const openModal = (service) => setSelectedService(service);
 	const closeModal = () => setSelectedService(null);
 
