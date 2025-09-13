@@ -91,15 +91,31 @@ const serviceData = [
 const Services = () => {
 	const [selectedService, setSelectedService] = useState(null);
 
-	// Disable body scroll when modal is open
+	// Robust body scroll lock (prevents background scroll on iOS/Android too)
 	useEffect(() => {
-		if (selectedService) {
-			document.body.style.overflow = 'hidden';
-		} else {
-			document.body.style.overflow = 'auto';
-		}
+		if (!selectedService) return;
+		const scrollY = window.scrollY;
+		document.body.style.position = 'fixed';
+		document.body.style.top = `-${scrollY}px`;
+		document.body.style.left = '0';
+		document.body.style.right = '0';
+		document.body.style.width = '100%';
+
+		const onKeyDown = (e) => {
+			if (e.key === 'Escape') setSelectedService(null);
+		};
+		window.addEventListener('keydown', onKeyDown);
+
 		return () => {
-			document.body.style.overflow = 'auto';
+			// restore scroll
+			const top = document.body.style.top;
+			document.body.style.position = '';
+			document.body.style.top = '';
+			document.body.style.left = '';
+			document.body.style.right = '';
+			document.body.style.width = '';
+			window.scrollTo(0, Math.abs(parseInt(top || '0', 10)));
+			window.removeEventListener('keydown', onKeyDown);
 		};
 	}, [selectedService]);
 
@@ -155,29 +171,43 @@ const Services = () => {
 				</div>
 
 				{selectedService && (
-					<div className="modal-overlay" onClick={closeModal}>
+					<div
+						className="sp-modal-overlay"
+						onClick={closeModal}
+						role="dialog"
+						aria-modal="true"
+					>
 						<div
-							className="modal-content"
+							className="sp-modal"
 							onClick={(e) => e.stopPropagation()}
 						>
-							<span className="close-btn" onClick={closeModal}>
-								&times;
-							</span>
-							<div className="modal-header">
-								<h3>{selectedService.title}</h3>
+							<div className="sp-modal-header">
+								<h3 className="sp-modal-title">
+									{selectedService.title}
+								</h3>
+								<button
+									type="button"
+									className="sp-close-btn"
+									onClick={closeModal}
+									aria-label="Close"
+								>
+									&times;
+								</button>
 							</div>
-							<div className="modal-image">
-								<img
-									src={selectedService.image}
-									alt={selectedService.title}
-									loading="lazy"
-								/>
-							</div>
-							<div className="modal-body">
-								<p className="modal-description">
+
+							<div className="sp-modal-body">
+								<div className="sp-modal-image">
+									<img
+										src={selectedService.image}
+										alt={selectedService.title}
+										loading="lazy"
+									/>
+								</div>
+
+								<p className="sp-modal-description">
 									{selectedService.description}
 								</p>
-								<p className="modal-details">
+								<p className="sp-modal-details">
 									{selectedService.details}
 								</p>
 							</div>
