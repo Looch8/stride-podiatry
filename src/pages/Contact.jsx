@@ -55,7 +55,7 @@ const Contact = () => {
 	const contactLD = {
 		'@context': 'https://schema.org',
 		'@type': 'ContactPage',
-		url: 'https://stride-podiatry.com.au/contact-us',
+		url: 'https://stride-podiatry.com.au/contact-us/',
 		mainEntity: {
 			'@type': 'MedicalBusiness',
 			name: 'Stride Podiatry',
@@ -87,7 +87,7 @@ const Contact = () => {
 
 			<div className="contact-container">
 				<div className="contact-header">
-					<h2>Contact Stride Podiatry</h2>
+					<h1>Contact Stride Podiatry</h1>
 					<p>
 						Have a question? Need more information? We&apos;re here
 						to help!
@@ -96,7 +96,7 @@ const Contact = () => {
 
 				<div className="contact-grid">
 					<div className="contact-info">
-						<h3>Get in Touch</h3>
+						<h2>Get in Touch</h2>
 						<ul>
 							<li>
 								<div className="contact-item">
@@ -150,7 +150,7 @@ const Contact = () => {
 					</div>
 
 					<div className="contact-form-container">
-						<h3>Send us a Message</h3>
+						<h2>Send us a Message</h2>
 						<form className="contact-form" onSubmit={handleSubmit}>
 							<div className="form-group">
 								<label htmlFor="name">Your Name</label>

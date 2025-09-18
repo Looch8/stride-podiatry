@@ -85,6 +85,7 @@ const Booking = () => {
 			</p>
 
 			<form className="booking-form" onSubmit={handleSubmit}>
+				{/* form unchanged */}
 				<div className="form-group">
 					<label htmlFor="fullName">Full Name</label>
 					<input

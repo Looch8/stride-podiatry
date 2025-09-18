@@ -1,9 +1,7 @@
-// Services.jsx
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import '../styles/Services.css';
 
-// Images
 import generalCareImg from '../assets/images/general-foot-care.jpg';
 import ingrownNailImg from '../assets/images/ingrown-nail.jpg';
 import diabetesCareImg from '../assets/images/diabetesCare2.png';
@@ -19,79 +17,78 @@ const serviceData = [
 		title: 'General Podiatry Care',
 		image: generalCareImg,
 		description:
-			'We provide expert care for nails, corns, and calluses to keep your feet healthy and comfortable.',
+			'Expert care for nails, corns and calluses to keep your feet healthy and comfortable.',
 		details:
-			'Common conditions treated: thickened nails, corns, calluses, and cracked heels. Treatment includes debridement, padding, and footwear advice.',
+			'Common conditions: thickened nails, corns, calluses and cracked heels. Treatments include debridement, padding and footwear advice.',
 	},
 	{
 		id: 'ingrown-toenails',
-		title: 'Ingrown Toenail Care',
+		title: 'Ingrown Toenail Treatment',
 		image: ingrownNailImg,
 		description:
-			'Specialised treatment for painful and infected ingrown toenails, ensuring quick relief and recovery.',
+			'Specialised care for painful or infected ingrown toenails for quick relief and recovery.',
 		details:
-			'Common treatments include conservative nail care, nail bracing, and minor surgical procedures under local anesthesia.',
+			'Conservative care, nail bracing and minor procedures under local anaesthetic when suitable.',
 	},
 	{
 		id: 'diabetic-assessments',
-		title: 'Diabetes Care',
+		title: 'Diabetes Foot Care',
 		image: diabetesCareImg,
 		description:
-			'Comprehensive foot assessments and care for people with diabetes to prevent complications and maintain foot health.',
+			'Comprehensive assessments and care to prevent complications and maintain foot health.',
 		details:
-			'Includes neurological & vascular assessments, prevention of diabetic foot ulcers, and routine nail/skin care.',
+			'Neurological & vascular screening, ulcer prevention, routine nail/skin care and education.',
 	},
 	{
 		id: 'biomechanics',
-		title: 'Biomechanics',
+		title: 'Biomechanics & Gait Assessment',
 		image: biomechanicsImg,
 		description:
-			'Analysis of foot function and movement to address imbalances and improve overall mobility.',
+			'Analyse foot function and movement to address imbalances and improve mobility.',
 		details:
-			'Treatment involves gait assessments, orthotics, and strengthening exercises to prevent pain and injury.',
+			'Gait assessment, orthotics and strengthening to prevent pain and injury.',
 	},
 	{
 		id: 'orthotics',
 		title: 'Custom Orthotics',
 		image: orthoticsImg,
 		description:
-			'Personalised orthotic devices designed to support your feet, correct biomechanical issues, and relieve pain.',
+			'Personalised devices to support your feet, correct mechanics and relieve pain.',
 		details:
-			'Custom-made orthotics based on detailed biomechanical assessment, foot shape, and your specific needs.',
+			'Custom-made from detailed assessment, foot shape and activity needs.',
 	},
 	{
 		id: 'heel-pain',
-		title: 'Foot Pain',
+		title: 'Heel & Arch Pain',
 		image: footPainImg,
 		description:
-			'Diagnosis and treatment of various causes of foot pain to help you get back on your feet pain-free.',
+			'Diagnosis and treatment to help you get back on your feet.',
 		details:
-			'Conditions treated include plantar fasciitis, heel spurs, and Achilles tendinitis using pain management, orthotics, and rehab plans.',
+			'Plantar fasciitis, heel spurs, Achilles tendinopathy — managed with loading plans, orthotics and footwear.',
 	},
 	{
 		id: 'footwear',
-		title: 'Shoewear Advice',
+		title: 'Footwear Advice',
 		image: shoewearImg,
 		description:
-			'Personalised recommendations to ensure your footwear supports your lifestyle and foot health.',
+			'Recommendations to ensure your footwear supports your lifestyle and foot health.',
 		details:
-			'Assessing foot shape, arch support, and gait pattern to recommend appropriate footwear for comfort and injury prevention.',
+			'Fit and function assessment, arch support needs, and activity-specific guidance.',
 	},
 	{
 		id: 'sports-podiatry',
 		title: 'Sports Podiatry',
 		image: sportsPodiatryImg,
 		description:
-			'Specialised care for athletes and sports enthusiasts to prevent and treat sports-related foot conditions.',
+			'Care for athletes and active people to prevent and treat foot/ankle issues.',
 		details:
-			'Includes sports-specific assessments, injury prevention strategies, and treatment for common sports-related foot and lower limb conditions.',
+			'Sport-specific assessments, injury prevention and treatment plans.',
 	},
 ];
 
 const Services = () => {
 	const [selectedService, setSelectedService] = useState(null);
 
-	// Robust body scroll lock (prevents background scroll on iOS/Android too)
 	useEffect(() => {
 		if (!selectedService) return;
 		const scrollY = window.scrollY;
@@ -100,14 +97,11 @@ const Services = () => {
 		document.body.style.left = '0';
 		document.body.style.right = '0';
 		document.body.style.width = '100%';
-
 		const onKeyDown = (e) => {
 			if (e.key === 'Escape') setSelectedService(null);
 		};
 		window.addEventListener('keydown', onKeyDown);
-
 		return () => {
-			// restore scroll
 			const top = document.body.style.top;
 			document.body.style.position = '';
 			document.body.style.top = '';
@@ -125,13 +119,10 @@ const Services = () => {
 	return (
 		<section className="services">
 			<Helmet>
-				<title>
-					Podiatry Services | Mobile Podiatrist Adelaide | Stride
-					Podiatry
-				</title>
+				<title>Podiatry Services in Adelaide | Home Visits</title>
 				<meta
 					name="description"
-					content="Mobile podiatry services in Adelaide: general foot & nail care, heel pain, ingrown toenails, diabetic assessments, biomechanics, orthotics, footwear advice and sports podiatry."
+					content="Mobile podiatry in Adelaide: general foot & nail care, heel and arch pain, ingrown toenails, diabetes assessments, biomechanics, custom orthotics, footwear advice and sports podiatry."
 				/>
 				<meta name="robots" content="index, follow" />
 				<link
@@ -142,22 +133,22 @@ const Services = () => {
 
 			<div className="services-container">
 				<div className="services-header">
-					<h2>Our Services</h2>
+					<h1>Our Podiatry Services</h1>
 					<p>
-						Comprehensive foot care solutions tailored to your
-						needs. Click on any service to learn more.
+						Comprehensive foot care solutions tailored to you.
+						Select a service to learn more.
 					</p>
 				</div>
 
 				<div className="services-grid">
 					{serviceData.map((service) => (
-						<div
+						<article
 							key={service.id}
 							id={service.id}
 							className="service-card"
 							onClick={() => openModal(service)}
 						>
-							<h3>{service.title}</h3>
+							<h2>{service.title}</h2>
 							<p>{service.description}</p>
 							<div className="service-image">
 								<img
@@ -166,7 +157,7 @@ const Services = () => {
 									loading="lazy"
 								/>
 							</div>
-						</div>
+						</article>
 					))}
 				</div>
 
@@ -182,9 +173,9 @@ const Services = () => {
 							onClick={(e) => e.stopPropagation()}
 						>
 							<div className="sp-modal-header">
-								<h3 className="sp-modal-title">
+								<h2 className="sp-modal-title">
 									{selectedService.title}
-								</h3>
+								</h2>
 								<button
 									type="button"
 									className="sp-close-btn"
@@ -194,7 +185,6 @@ const Services = () => {
 									&times;
 								</button>
 							</div>
-
 							<div className="sp-modal-body">
 								<div className="sp-modal-image">
 									<img
@@ -203,7 +193,6 @@ const Services = () => {
 										loading="lazy"
 									/>
 								</div>
-
 								<p className="sp-modal-description">
 									{selectedService.description}
 								</p>

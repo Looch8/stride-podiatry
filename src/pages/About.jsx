@@ -8,11 +8,11 @@ const About = () => {
 		<div className="about-container">
 			<Helmet>
 				<title>
-					About Stride Podiatry | Mobile Podiatrist in Adelaide
+					About Stride Podiatry | Mobile Podiatrist Adelaide
 				</title>
 				<meta
 					name="description"
-					content="Stride Podiatry provides high-quality mobile podiatry in Adelaide. Meet Luke Wheldale and learn about our mission to deliver convenient, expert foot care at home."
+					content="Meet Luke Wheldale of Stride Podiatry. We provide convenient, expert mobile podiatry across Adelaide with a friendly, patient-first approach."
 				/>
 				<meta name="robots" content="index, follow" />
 				<link
@@ -25,28 +25,27 @@ const About = () => {
 				<div className="about-text">
 					<h1>About Stride Podiatry</h1>
 					<p>
-						Stride Podiatry is a home visit service dedicated to
-						providing high-quality foot care to individuals in the
-						comfort of their homes. We cater to private patients as
-						well as those with a Chronic Disease Management Plan
-						through Medicare, DVA, and NDIS.
+						Stride Podiatry is a home-visit service dedicated to
+						providing high-quality podiatry care in the comfort of
+						your home. We support private patients as well as
+						Medicare Chronic Disease Management(CDM/EPC), DVA and
+						NDIS participants.
 					</p>
 					<p>
-						Our mission is to offer accessible and comprehensive
-						podiatry services for those who prefer or require
-						in-home visits. Whether you need regular foot care,
-						treatment for chronic conditions, or assistance with
-						mobility and comfort, we are here to help.
+						Our mission is to make foot care accessible and
+						comprehensive for people who prefer or require in-home
+						visits, from regular care to chronic conditions and
+						mobility support.
 					</p>
 					<p>
-						If you&apos;re looking for a trusted, reliable, and
-						experienced podiatrist who comes to you, Stride Podiatry
-						is the right choice.
+						If you’re looking for a trusted, reliable podiatrist in
+						Adelaide who comes to you, Stride Podiatry is here to
+						help.
 					</p>
 				</div>
 				<img
 					src={profilePhoto}
-					alt="Stride Podiatry - Professional Service"
+					alt="Stride Podiatry — home-visit podiatry in Adelaide"
 					className="profile-photo"
 					loading="lazy"
 					width="420"
@@ -57,36 +56,24 @@ const About = () => {
 			<div className="about-section">
 				<img
 					src={casualPhoto}
-					alt="Luke Wheldale - Personal"
+					alt="Luke Wheldale, Podiatrist"
 					className="profile-photo"
 					loading="lazy"
 					width="420"
 					height="420"
 				/>
 				<div className="about-text">
-					<h1>About Me</h1>
+					<h2>About Luke</h2>
 					<p>
-						Hi, I&apos;m Luke Wheldale, and while I&apos;m
-						passionate about providing quality podiatry care,
-						I&apos;m also a family man and active member of my
-						community. I&apos;m blessed to be married to my
-						wonderful wife and we have a beautiful young daughter
-						who brings so much joy to our lives.
+						Hi, I’m Luke Wheldale. I’m passionate about delivering
+						quality podiatry care and serving the Adelaide
+						community. I’m a family man and an active member of my
+						local church.
 					</p>
 					<p>
-						Faith plays an important role in my life, and I&apos;m
-						an active member of my local church community. When
-						I&apos;m not helping patients or spending time with my
-						family, you can find me playing guitar, reading,
-						travelling. I believe in maintaining a healthy work-life
-						balance and making time for the things that matter most.
-					</p>
-					<p>
-						I&apos;m grateful for the opportunity to serve my
-						community through podiatry while also being present for
-						my family and pursuing my personal interests. It&apos;s
-						this balance that helps me bring my best self to both my
-						professional and personal life.
+						When I’m not helping patients, you’ll find me with my
+						family, playing guitar, reading or travelling. Finding
+						balance helps me bring my best to both work and home.
 					</p>
 				</div>
 			</div>

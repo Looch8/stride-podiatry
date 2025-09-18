@@ -30,9 +30,17 @@
 .booking-container h1 {
 	font-size: 3.2rem;
 	color: #445e6c;
-	margin-bottom: 1.5rem;
+	margin-bottom: 0.75rem;
 	font-weight: 700;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Optional subheading under the H1 */
+.booking-container h2 {
+	font-size: 1.25rem;
+	color: #4b5563;
+	font-weight: 500;
+	margin: 0 0 2rem 0;
 }
 
 .booking-container p {
@@ -63,14 +71,23 @@
 	font-size: 1.05rem;
 }
 
+/* Only required fields get the red asterisk */
+.form-group .required-label::after {
+	content: ' *';
+	color: #dc3545;
+	font-weight: bold;
+}
+
 .form-group input,
 .form-group textarea {
 	padding: 1rem;
 	border: 2px solid #e3e8ee;
 	border-radius: 12px;
 	font-size: 1.05rem;
-	transition: all 0.25s ease;
+	transition: box-shadow 0.25s ease, border-color 0.25s ease,
+		background-color 0.25s ease;
 	background-color: #f7fafc;
+	color: #111827;
 }
 
 .form-group input:hover,
@@ -87,8 +104,23 @@
 	background: #ffffff;
 }
 
+/* Keyboard-only focus ring */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+	box-shadow: 0 0 0 4px rgba(68, 94, 108, 0.35);
+}
+
 textarea {
 	resize: none;
+}
+
+/* Improve browser autofill colours */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+	box-shadow: 0 0 0 1000px #ffffff inset;
+	-webkit-text-fill-color: #111827;
+	caret-color: #111827;
 }
 
 .submit-button {
@@ -100,7 +132,7 @@ textarea {
 	border: none;
 	border-radius: 12px;
 	cursor: pointer;
-	transition: all 0.2s ease;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 	font-weight: 700;
 	letter-spacing: 0.3px;
 	margin-top: 1rem;
@@ -116,15 +148,16 @@ textarea {
 	transform: translateY(0);
 }
 
+.submit-button:disabled,
+.submit-button.loading {
+	background: #5e7b8e;
+	cursor: not-allowed;
+	opacity: 0.9;
+}
+
 #booking-reason {
 	grid-column: 1 / -1;
 	text-align: left;
-}
-
-.form-group label::after {
-	content: ' *';
-	color: #dc3545;
-	font-weight: bold;
 }
 
 /* Responsive */
@@ -155,7 +188,12 @@ textarea {
 	}
 	.booking-container h1 {
 		font-size: 2rem;
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
+		padding: 0 0.5rem;
+	}
+	.booking-container h2 {
+		font-size: 1.1rem;
+		margin-bottom: 1.25rem;
 		padding: 0 0.5rem;
 	}
 	.booking-container p {
@@ -217,13 +255,7 @@ textarea {
 	}
 }
 
-/* States */
-.submit-button.loading {
-	background: #5e7b8e;
-	cursor: not-allowed;
-	opacity: 0.9;
-}
-
+/* State messages */
 .success-message {
 	background: #e6f6ea;
 	color: #196a2c;
@@ -249,5 +281,15 @@ textarea {
 	to {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.submit-button,
+	.success-message,
+	.error-message {
+		transition: none;
+		animation: none;
 	}
 }

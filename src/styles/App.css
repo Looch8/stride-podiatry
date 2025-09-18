@@ -40,6 +40,14 @@ h4 {
 		sans-serif;
 }
 
+/* Default heading colour site-wide; local styles can override */
+h1,
+h2,
+h3,
+h4 {
+	color: var(--brand-primary-800);
+}
+
 /* Fluid hero sizes (classes used on Home) */
 .title {
 	font-size: clamp(2rem, 6vw, 4rem);
@@ -109,4 +117,12 @@ button:focus-visible {
 		transition: none !important;
 		animation: none !important;
 	}
+}
+
+/* Remove heading underline inside dark sections */
+.cta-section h2::after,
+.hero-section h1::after,
+.hero-section h2::after {
+	display: none;
+	content: none;
 }

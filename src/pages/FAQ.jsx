@@ -7,32 +7,31 @@ const FAQ = () => {
 	const toggleFAQ = (index) =>
 		setOpenIndex(openIndex === index ? null : index);
 
-	// Stable data to satisfy eslint-plugin-react-hooks
 	const faqData = useMemo(
 		() => [
 			{
 				question: 'Do I need a referral to see a podiatrist?',
-				answer: "No, you don't need a referral to book an appointment with Stride Podiatry. We accept private bookings, Medicare (CDM plans), NDIS, and DVA clients.",
+				answer: "No, you don't need a referral to book with Stride Podiatry. We accept private bookings, Medicare CDM plans, NDIS and DVA clients.",
 			},
 			{
 				question: 'Do you accept Medicare, NDIS, and DVA clients?',
-				answer: 'Yes! We accept Medicare CDM plans (with GP referral), DVA Gold Card holders, and NDIS funding for eligible participants.',
+				answer: 'Yes—Medicare CDM (with GP referral), DVA Gold Card holders, and NDIS (where eligible).',
 			},
 			{
 				question: 'Where do you provide mobile podiatry services?',
-				answer: 'Stride Podiatry serves all of the Adelaide metro area. If you are outside this region, contact us to discuss your options.',
+				answer: 'Across the Adelaide metro area. If you’re outside this region, contact us to discuss options.',
 			},
 			{
 				question: 'What conditions do you treat?',
-				answer: 'We specialise in foot pain, general footcare, ingrown toenails, diabetic foot care, corns, calluses, plantar fasciitis, and footwear assessments.',
+				answer: 'Foot pain, general footcare, ingrown toenails, diabetic foot care, corns, calluses, plantar fasciitis, footwear assessments and more.',
 			},
 			{
 				question: 'How do I book an appointment?',
-				answer: 'Call us, email us, or use our online booking/contact form.',
+				answer: 'Call us, email us, or use our online booking form.',
 			},
 			{
 				question: 'What should I expect during a home visit?',
-				answer: 'We assess your feet, provide treatment as needed, and offer footwear or mobility advice to keep your feet healthy.',
+				answer: 'Assessment, treatment as needed, and advice on footwear and mobility to keep your feet healthy.',
 			},
 		],
 		[]
@@ -54,10 +53,10 @@ const FAQ = () => {
 	return (
 		<section className="faq">
 			<Helmet>
-				<title>Mobile Podiatry FAQs | Stride Podiatry Adelaide</title>
+				<title>Podiatry FAQs | Stride Podiatry Adelaide</title>
 				<meta
 					name="description"
-					content="Answers to common questions about mobile podiatry in Adelaide: Medicare CDM, NDIS, DVA, service areas, conditions treated, and what to expect at a home visit."
+					content="Answers to common questions about mobile podiatry in Adelaide: Medicare CDM, NDIS, DVA, service areas, conditions treated, and what to expect."
 				/>
 				<meta name="robots" content="index, follow" />
 				<link
@@ -73,8 +72,8 @@ const FAQ = () => {
 				<div className="faq-header">
 					<h1>Frequently Asked Questions</h1>
 					<p className="faq-intro">
-						Find answers to common questions about our mobile
-						podiatry services, bookings, and treatments.
+						Find answers about our mobile podiatry services,
+						bookings and treatments.
 					</p>
 				</div>
 
