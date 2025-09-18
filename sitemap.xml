@@ -2,6 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://stride-podiatry.com.au/</loc></url>
   <url><loc>https://stride-podiatry.com.au/services/</loc></url>
+
+  <!-- Service detail pages -->
+  <url><loc>https://stride-podiatry.com.au/services/general-podiatry/</loc></url>
+  <url><loc>https://stride-podiatry.com.au/services/ingrown-toenail/</loc></url>
+  <url><loc>https://stride-podiatry.com.au/services/diabetes-foot-care/</loc></url>
+  <url><loc>https://stride-podiatry.com.au/services/biomechanics-gait/</loc></url>
+  <url><loc>https://stride-podiatry.com.au/services/custom-orthotics/</loc></url>
+  <url><loc>https://stride-podiatry.com.au/services/heel-arch-pain/</loc></url>
+  <url><loc>https://stride-podiatry.com.au/services/footwear-advice/</loc></url>
+  <url><loc>https://stride-podiatry.com.au/services/sports-podiatry/</loc></url>
+  <url><loc>https://stride-podiatry.com.au/services/forefoot-pain/</loc></url>
+
+  <!-- Top-level pages -->
   <url><loc>https://stride-podiatry.com.au/about-us/</loc></url>
   <url><loc>https://stride-podiatry.com.au/booking/</loc></url>
   <url><loc>https://stride-podiatry.com.au/contact-us/</loc></url>
