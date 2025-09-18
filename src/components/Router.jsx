@@ -22,6 +22,7 @@ import SportsPodiatry from '../pages/services/SportsPodiatry';
 import ForefootPain from '../pages/services/ForefootPain';
 
 const Router = () => {
+	console.log('Router build v1 :: has service routes = YES');
 	return (
 		<Routes>
 			{/* Core routes (canonical) */}
@@ -33,34 +34,72 @@ const Router = () => {
 			<Route path="/booking" element={<Booking />} />
 			<Route path="/faq" element={<FAQ />} />
 
-			{/* Service detail routes (canonical) */}
+			{/* Service detail routes (canonical + trailing-slash twins) */}
 			<Route
 				path="/services/general-podiatry"
 				element={<GeneralPodiatry />}
 			/>
 			<Route
+				path="/services/general-podiatry/"
+				element={<GeneralPodiatry />}
+			/>
+
+			<Route
 				path="/services/ingrown-toenail"
 				element={<IngrownToenail />}
 			/>
+			<Route
+				path="/services/ingrown-toenail/"
+				element={<IngrownToenail />}
+			/>
+
 			<Route
 				path="/services/diabetes-foot-care"
 				element={<DiabetesCare />}
 			/>
 			<Route
+				path="/services/diabetes-foot-care/"
+				element={<DiabetesCare />}
+			/>
+
+			<Route
 				path="/services/biomechanics-gait"
 				element={<Biomechanics />}
 			/>
+			<Route
+				path="/services/biomechanics-gait/"
+				element={<Biomechanics />}
+			/>
+
 			<Route path="/services/custom-orthotics" element={<Orthotics />} />
+			<Route path="/services/custom-orthotics/" element={<Orthotics />} />
+
 			<Route path="/services/heel-arch-pain" element={<HeelArchPain />} />
+			<Route
+				path="/services/heel-arch-pain/"
+				element={<HeelArchPain />}
+			/>
+
 			<Route
 				path="/services/footwear-advice"
 				element={<FootwearAdvice />}
 			/>
 			<Route
+				path="/services/footwear-advice/"
+				element={<FootwearAdvice />}
+			/>
+
+			<Route
 				path="/services/sports-podiatry"
 				element={<SportsPodiatry />}
 			/>
+			<Route
+				path="/services/sports-podiatry/"
+				element={<SportsPodiatry />}
+			/>
+
 			<Route path="/services/forefoot-pain" element={<ForefootPain />} />
+			<Route path="/services/forefoot-pain/" element={<ForefootPain />} />
 
 			{/* --- Redirects to keep old/internal links working --- */}
 			{/* Old top-level paths -> new canonical */}

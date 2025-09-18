@@ -10,6 +10,7 @@ import footPainImg from '../assets/images/foot-pain.jpg';
 import shoewearImg from '../assets/images/shoewear.jpg';
 import orthoticsImg from '../assets/images/orthoticsImg.jpg';
 import sportsPodiatryImg from '../assets/images/sportsPodiatryImg.jpeg';
+import forefootImg from '../assets/images/bunion.jpg';
 
 const serviceData = [
 	{
@@ -20,13 +21,15 @@ const serviceData = [
 		description:
 			'Nails, corns and calluses — keep your feet healthy and comfortable.',
 	},
+
 	{
-		id: 'ingrown-toenails',
+		id: 'ingrown-toenail',
 		title: 'Ingrown Toenail Treatment',
 		image: ingrownNailImg,
-		to: '/services/ingrown-toenails',
+		to: '/services/ingrown-toenail',
 		description: 'Relief for painful or infected ingrown toenails.',
 	},
+
 	{
 		id: 'diabetes-foot-care',
 		title: 'Diabetes Foot Care',
@@ -34,6 +37,7 @@ const serviceData = [
 		to: '/services/diabetes-foot-care',
 		description: 'Assessments and care to prevent complications.',
 	},
+
 	{
 		id: 'biomechanics-gait',
 		title: 'Biomechanics & Gait',
@@ -41,6 +45,7 @@ const serviceData = [
 		to: '/services/biomechanics-gait',
 		description: 'Analyse movement and address imbalances.',
 	},
+
 	{
 		id: 'custom-orthotics',
 		title: 'Custom Orthotics',
@@ -48,19 +53,13 @@ const serviceData = [
 		to: '/services/custom-orthotics',
 		description: 'Personalised devices to support and relieve pain.',
 	},
+
 	{
 		id: 'heel-arch-pain',
 		title: 'Heel & Arch Pain',
 		image: footPainImg,
 		to: '/services/heel-arch-pain',
 		description: 'Diagnosis and treatment plans that get you moving.',
-	},
-	{
-		id: 'forefoot-pain',
-		title: 'Forefoot Pain',
-		image: footPainImg, // or forefootPainImg if you want a unique photo
-		to: '/services/forefoot-pain',
-		description: 'Care for bunions, Morton’s neuroma and hammer toes.',
 	},
 
 	{
@@ -70,12 +69,21 @@ const serviceData = [
 		to: '/services/footwear-advice',
 		description: 'Shoes that fit your feet and your life.',
 	},
+
 	{
 		id: 'sports-podiatry',
 		title: 'Sports Podiatry',
 		image: sportsPodiatryImg,
 		to: '/services/sports-podiatry',
 		description: 'Prevent and treat sport-related foot/ankle issues.',
+	},
+
+	{
+		id: 'forefoot-pain',
+		title: 'Forefoot Pain',
+		image: forefootImg,
+		to: '/services/forefoot-pain',
+		description: 'Bunions, Morton’s neuroma, hammertoes and more.',
 	},
 ];
 
