@@ -10,14 +10,17 @@ const path = require('path');
 const site = 'https://stride-podiatry.com.au';
 
 const pages = [
+	// Home
 	{
-		route: '/', // writes back to dist/index.html too
+		route: '/',
 		out: 'index.html',
 		canonical: `${site}/`,
 		title: 'Stride Podiatry | Mobile Podiatrist Adelaide — Home Visits',
 		description:
 			'Expert mobile podiatry across Adelaide. Home visit foot care, ingrown toenails, heel pain, diabetic assessments, orthotics and more. No referral needed—book online.',
 	},
+
+	// Top-level pages
 	{
 		route: '/about-us/',
 		out: 'about-us/index.html',
@@ -65,6 +68,80 @@ const pages = [
 		title: 'Refer a Patient | Stride Podiatry',
 		description:
 			'GPs, care coordinators and support providers—download the referral form and refer patients for mobile podiatry across Adelaide.',
+	},
+
+	// Service detail page shells (important for static hosting)
+	{
+		route: '/services/general-podiatry/',
+		out: 'services/general-podiatry/index.html',
+		canonical: `${site}/services/general-podiatry/`,
+		title: 'General Podiatry Care | Stride Podiatry',
+		description:
+			'Nails, corns and calluses—keep your feet healthy and comfortable with gentle mobile podiatry care in Adelaide.',
+	},
+	{
+		route: '/services/ingrown-toenail/',
+		out: 'services/ingrown-toenail/index.html',
+		canonical: `${site}/services/ingrown-toenail/`,
+		title: 'Ingrown Toenail Treatment | Stride Podiatry',
+		description:
+			'Relief for painful or infected ingrown toenails—conservative care, bracing and minor procedures when indicated.',
+	},
+	{
+		route: '/services/diabetes-foot-care/',
+		out: 'services/diabetes-foot-care/index.html',
+		canonical: `${site}/services/diabetes-foot-care/`,
+		title: 'Diabetes Foot Care | Stride Podiatry',
+		description:
+			'Comprehensive diabetes foot assessments, education and ongoing care to reduce risk and maintain foot health.',
+	},
+	{
+		route: '/services/biomechanics-gait/',
+		out: 'services/biomechanics-gait/index.html',
+		canonical: `${site}/services/biomechanics-gait/`,
+		title: 'Biomechanics & Gait | Stride Podiatry',
+		description:
+			'Functional assessment of foot and lower-limb mechanics with load management, strength programs and orthotics when needed.',
+	},
+	{
+		route: '/services/custom-orthotics/',
+		out: 'services/custom-orthotics/index.html',
+		canonical: `${site}/services/custom-orthotics/`,
+		title: 'Custom Orthotics | Stride Podiatry',
+		description:
+			'Personalised orthotic solutions to support your feet, improve mechanics and relieve pain.',
+	},
+	{
+		route: '/services/heel-arch-pain/',
+		out: 'services/heel-arch-pain/index.html',
+		canonical: `${site}/services/heel-arch-pain/`,
+		title: 'Heel & Arch Pain | Stride Podiatry',
+		description:
+			'Diagnosis and treatment for plantar fasciitis, heel spurs and Achilles issues to get you moving again.',
+	},
+	{
+		route: '/services/footwear-advice/',
+		out: 'services/footwear-advice/index.html',
+		canonical: `${site}/services/footwear-advice/`,
+		title: 'Footwear Advice | Stride Podiatry',
+		description:
+			'Get shoe recommendations that support your feet and match your activities and goals.',
+	},
+	{
+		route: '/services/sports-podiatry/',
+		out: 'services/sports-podiatry/index.html',
+		canonical: `${site}/services/sports-podiatry/`,
+		title: 'Sports Podiatry | Stride Podiatry',
+		description:
+			'Prevention and treatment of sports-related foot and ankle issues for active people and athletes.',
+	},
+	{
+		route: '/services/forefoot-pain/',
+		out: 'services/forefoot-pain/index.html',
+		canonical: `${site}/services/forefoot-pain/`,
+		title: 'Forefoot Pain | Stride Podiatry',
+		description:
+			'Assessment and treatment for forefoot pain including bunions, Morton’s neuroma and hammer toes.',
 	},
 ];
 

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import '../styles/Services.css';
 
 import generalCareImg from '../assets/images/general-foot-care.jpg';
@@ -13,109 +13,73 @@ import sportsPodiatryImg from '../assets/images/sportsPodiatryImg.jpeg';
 
 const serviceData = [
 	{
-		id: 'general-care',
+		id: 'general-podiatry',
 		title: 'General Podiatry Care',
 		image: generalCareImg,
+		to: '/services/general-podiatry',
 		description:
-			'Expert care for nails, corns and calluses to keep your feet healthy and comfortable.',
-		details:
-			'Common conditions: thickened nails, corns, calluses and cracked heels. Treatments include debridement, padding and footwear advice.',
+			'Nails, corns and calluses — keep your feet healthy and comfortable.',
 	},
 	{
 		id: 'ingrown-toenails',
 		title: 'Ingrown Toenail Treatment',
 		image: ingrownNailImg,
-		description:
-			'Specialised care for painful or infected ingrown toenails for quick relief and recovery.',
-		details:
-			'Conservative care, nail bracing and minor procedures under local anaesthetic when suitable.',
+		to: '/services/ingrown-toenails',
+		description: 'Relief for painful or infected ingrown toenails.',
 	},
 	{
-		id: 'diabetic-assessments',
+		id: 'diabetes-foot-care',
 		title: 'Diabetes Foot Care',
 		image: diabetesCareImg,
-		description:
-			'Comprehensive assessments and care to prevent complications and maintain foot health.',
-		details:
-			'Neurological & vascular screening, ulcer prevention, routine nail/skin care and education.',
+		to: '/services/diabetes-foot-care',
+		description: 'Assessments and care to prevent complications.',
 	},
 	{
-		id: 'biomechanics',
-		title: 'Biomechanics & Gait Assessment',
+		id: 'biomechanics-gait',
+		title: 'Biomechanics & Gait',
 		image: biomechanicsImg,
-		description:
-			'Analyse foot function and movement to address imbalances and improve mobility.',
-		details:
-			'Gait assessment, orthotics and strengthening to prevent pain and injury.',
+		to: '/services/biomechanics-gait',
+		description: 'Analyse movement and address imbalances.',
 	},
 	{
-		id: 'orthotics',
+		id: 'custom-orthotics',
 		title: 'Custom Orthotics',
 		image: orthoticsImg,
-		description:
-			'Personalised devices to support your feet, correct mechanics and relieve pain.',
-		details:
-			'Custom-made from detailed assessment, foot shape and activity needs.',
+		to: '/services/custom-orthotics',
+		description: 'Personalised devices to support and relieve pain.',
 	},
 	{
-		id: 'heel-pain',
+		id: 'heel-arch-pain',
 		title: 'Heel & Arch Pain',
 		image: footPainImg,
-		description:
-			'Diagnosis and treatment to help you get back on your feet.',
-		details:
-			'Plantar fasciitis, heel spurs, Achilles tendinopathy — managed with loading plans, orthotics and footwear.',
+		to: '/services/heel-arch-pain',
+		description: 'Diagnosis and treatment plans that get you moving.',
 	},
 	{
-		id: 'footwear',
+		id: 'forefoot-pain',
+		title: 'Forefoot Pain',
+		image: footPainImg, // or forefootPainImg if you want a unique photo
+		to: '/services/forefoot-pain',
+		description: 'Care for bunions, Morton’s neuroma and hammer toes.',
+	},
+
+	{
+		id: 'footwear-advice',
 		title: 'Footwear Advice',
 		image: shoewearImg,
-		description:
-			'Recommendations to ensure your footwear supports your lifestyle and foot health.',
-		details:
-			'Fit and function assessment, arch support needs, and activity-specific guidance.',
+		to: '/services/footwear-advice',
+		description: 'Shoes that fit your feet and your life.',
 	},
 	{
 		id: 'sports-podiatry',
 		title: 'Sports Podiatry',
 		image: sportsPodiatryImg,
-		description:
-			'Care for athletes and active people to prevent and treat foot/ankle issues.',
-		details:
-			'Sport-specific assessments, injury prevention and treatment plans.',
+		to: '/services/sports-podiatry',
+		description: 'Prevent and treat sport-related foot/ankle issues.',
 	},
 ];
 
 const Services = () => {
-	const [selectedService, setSelectedService] = useState(null);
-
-	useEffect(() => {
-		if (!selectedService) return;
-		const scrollY = window.scrollY;
-		document.body.style.position = 'fixed';
-		document.body.style.top = `-${scrollY}px`;
-		document.body.style.left = '0';
-		document.body.style.right = '0';
-		document.body.style.width = '100%';
-		const onKeyDown = (e) => {
-			if (e.key === 'Escape') setSelectedService(null);
-		};
-		window.addEventListener('keydown', onKeyDown);
-		return () => {
-			const top = document.body.style.top;
-			document.body.style.position = '';
-			document.body.style.top = '';
-			document.body.style.left = '';
-			document.body.style.right = '';
-			document.body.style.width = '';
-			window.scrollTo(0, Math.abs(parseInt(top || '0', 10)));
-			window.removeEventListener('keydown', onKeyDown);
-		};
-	}, [selectedService]);
-
-	const openModal = (service) => setSelectedService(service);
-	const closeModal = () => setSelectedService(null);
-
 	return (
 		<section className="services">
 			<Helmet>
@@ -141,68 +105,25 @@ const Services = () => {
 				</div>
 
 				<div className="services-grid">
-					{serviceData.map((service) => (
-						<article
-							key={service.id}
-							id={service.id}
+					{serviceData.map((s) => (
+						<Link
+							to={s.to}
+							key={s.id}
 							className="service-card"
-							onClick={() => openModal(service)}
+							aria-label={`${s.title} details`}
 						>
-							<h2>{service.title}</h2>
-							<p>{service.description}</p>
+							<h2>{s.title}</h2>
+							<p>{s.description}</p>
 							<div className="service-image">
 								<img
-									src={service.image}
-									alt={service.title}
+									src={s.image}
+									alt={s.title}
 									loading="lazy"
 								/>
 							</div>
-						</article>
+						</Link>
 					))}
 				</div>
-
-				{selectedService && (
-					<div
-						className="sp-modal-overlay"
-						onClick={closeModal}
-						role="dialog"
-						aria-modal="true"
-					>
-						<div
-							className="sp-modal"
-							onClick={(e) => e.stopPropagation()}
-						>
-							<div className="sp-modal-header">
-								<h2 className="sp-modal-title">
-									{selectedService.title}
-								</h2>
-								<button
-									type="button"
-									className="sp-close-btn"
-									onClick={closeModal}
-									aria-label="Close"
-								>
-									&times;
-								</button>
-							</div>
-							<div className="sp-modal-body">
-								<div className="sp-modal-image">
-									<img
-										src={selectedService.image}
-										alt={selectedService.title}
-										loading="lazy"
-									/>
-								</div>
-								<p className="sp-modal-description">
-									{selectedService.description}
-								</p>
-								<p className="sp-modal-details">
-									{selectedService.details}
-								</p>
-							</div>
-						</div>
-					</div>
-				)}
 			</div>
 		</section>
 	);
