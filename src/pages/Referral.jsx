@@ -19,24 +19,54 @@ const Referral = () => {
 
 			<h1>Refer a Patient</h1>
 			<p>
-				If you&apos;re a care coordinator, GP or provider, refer a
-				patient to Stride Podiatry using the form below.
+				If you&apos;re a care coordinator, GP or provider, you can refer
+				a patient to Stride Podiatry using our secure online form or by
+				downloading a PDF copy.
 			</p>
-			<p>
-				📄 <strong>Download:</strong>{' '}
-				<a href="/referral-form.pdf" download>
-					Stride Podiatry Referral Form (PDF)
-				</a>
-			</p>
-			<p>
-				📬 Email completed forms to:{' '}
-				<a href="mailto:luke@stride-podiatry.com.au">
-					luke@stride-podiatry.com.au
-				</a>
-			</p>
-			<p>
-				📞 For queries, call <strong>0468 518 993</strong>
-			</p>
+
+			{/* --- Option 1: Online Form --- */}
+			<section className="form-section">
+				<h2>Option 1: Submit Online</h2>
+				<p>
+					Complete and submit the secure form below. Your referral
+					will be sent directly to Stride Podiatry through our online
+					system.
+				</p>
+				<div className="form-container">
+					<iframe
+						src="https://stride-podiatry.splose.com/public-form/fcd1208d-e801-454b-a248-4ae9d65fd4dd"
+						name="embeddableForm"
+						scrolling="auto"
+						loading="lazy"
+						frameBorder="0"
+						title="Stride Podiatry Referral Form"
+					></iframe>
+				</div>
+			</section>
+
+			{/* --- Option 2: PDF Form --- */}
+			<section className="form-section">
+				<h2>Option 2: Download PDF Form</h2>
+				<p>
+					If you prefer, you can download and complete our PDF
+					referral form instead.
+				</p>
+				<p>
+					📄 <strong>Download:</strong>{' '}
+					<a href="/referral-form.pdf" download>
+						Stride Podiatry Referral Form (PDF)
+					</a>
+				</p>
+				<p>
+					📬 Email completed forms to:{' '}
+					<a href="mailto:luke@stride-podiatry.com.au">
+						luke@stride-podiatry.com.au
+					</a>
+				</p>
+				<p>
+					📞 For queries, call <strong>0468 518 993</strong>
+				</p>
+			</section>
 		</div>
 	);
 };
