@@ -1,0 +1,12 @@
+{
+	"trailingSlash": true,
+	"redirects": [
+		{ "source": "/about", "destination": "/about-us/", "permanent": true },
+		{
+			"source": "/contact",
+			"destination": "/contact-us/",
+			"permanent": true
+		}
+	],
+	"rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
