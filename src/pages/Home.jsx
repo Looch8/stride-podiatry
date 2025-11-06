@@ -45,7 +45,7 @@ const Home = () => {
 			{/* Hero */}
 			<section className="hero-section">
 				<div className="hero-content">
-					<h1 className="title">Mobile Podiatrist in Adelaide, SA</h1>
+					<h1 className="title">Mobile Podiatrist in Adelaide</h1>
 					<h2 className="subtitle">
 						Stride Podiatry — We Come to You
 					</h2>
