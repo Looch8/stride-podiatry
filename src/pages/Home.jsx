@@ -30,7 +30,7 @@ const Home = () => {
 	return (
 		<main className="main-content">
 			<Helmet>
-				<title>Mobile Podiatrist Adelaide, SA | Stride Podiatry</title>
+				<title>Mobile Podiatrist Adelaide | Stride Podiatry</title>
 				<meta
 					name="description"
 					content="Expert mobile podiatry across Adelaide. Home-visit foot care, ingrown toenails, heel pain, diabetic assessments, orthotics and more. No referral needed—book online."
@@ -45,7 +45,7 @@ const Home = () => {
 			{/* Hero */}
 			<section className="hero-section">
 				<div className="hero-content">
-					<h1 className="title">Mobile Podiatrist in Adelaide</h1>
+					<h1 className="title">Mobile Podiatrist in Adelaide, SA</h1>
 					<h2 className="subtitle">
 						Stride Podiatry — We Come to You
 					</h2>
